@@ -12,6 +12,7 @@
 * {
   font-family: "Platypi", serif;
   font-weight: 400;
+  color: var(--brown-dark);
 }
 
 body {
@@ -27,7 +28,7 @@ body .main-container {
 }
 
 section {
-  padding: 30px 10vw;
+  padding: 0 200px;
 }
 
 a {
@@ -39,26 +40,18 @@ a:hover {
   font-weight: bold;
 }
 
-h1, h2 {
-  font-style: italic;
-}
-
 h1 {
-  font-size: 96px;
-  font-weight: bold;
-  color: transparent;
-  -webkit-text-stroke: 3px rgb(255, 255, 255);
-  text-align: center;
+  font-size: 50px;
+  margin: 65px 0;
 }
 
 h2 {
-  font-size: calc(3vw + 22px);
+  font-size: calc(2vw + 10px);
   font-weight: normal;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 h4 {
@@ -92,18 +85,6 @@ p {
   margin-top: 80px;
 }
 
-@media (max-width: 700px) {
-  h1 {
-    font-size: 2em;
-    -webkit-text-stroke: 0.8px rgb(255, 255, 255);
-  }
-  h2 {
-    font-size: 46px;
-  }
-  h3 {
-    text-align: center;
-  }
-}
 header {
   display: flex;
   justify-content: space-between; /* Pour séparer le logo et le menu */
@@ -282,10 +263,157 @@ footer .first-footer .footer-contact > div img {
 footer .second-footer {
   background-color: var(--red1);
   width: 100%;
-  color: white;
   display: flex;
   justify-content: center;
 }
-footer .second-footer a {
+footer .second-footer p {
+  color: white;
+}
+footer .second-footer p a {
   font-family: "Work Sans", sans-serif;
+}
+
+.project-presentation {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.project-presentation h1 {
+  text-transform: uppercase;
+}
+.project-presentation h4 {
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  color: var(--brown-regular);
+}
+.project-presentation > div {
+  width: 50%;
+}
+.project-presentation .logo_project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-presentation .logo_project img {
+  max-width: 300px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
+.project-missions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+}
+.project-missions > div {
+  width: 50%;
+}
+.project-missions .project-missions-text {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-missions .project-missions-text li {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.contact-projet {
+  background-color: var(--red1);
+  padding: 100px;
+  text-align: center;
+  margin-top: 50px;
+}
+.contact-projet h3, .contact-projet a {
+  margin-top: 0;
+  color: white;
+}
+.contact-projet h3 {
+  text-align: center;
+  padding: 0;
+  font-size: 40px;
+}
+
+.projet-autres {
+  margin: 50px 0 100px 0;
+}
+.projet-autres h3 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--red2);
+}
+
+.catalogue-projet {
+  display: flex;
+  justify-content: space-between;
+}
+.catalogue-projet .projet {
+  height: 25vw;
+  width: 48%;
+  position: relative;
+}
+.catalogue-projet img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--peach);
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.photo-hover .hover-eye {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.photo-hover .hover-eye .eye {
+  width: 3vw;
+  height: auto;
+  min-width: 30px;
+}
+.photo-hover .hover-text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-hover .hover-text h4, .photo-hover .hover-text p {
+  text-transform: uppercase;
+}
+.photo-hover .hover-text h4 {
+  font-size: 20px;
+  color: white;
+}
+.photo-hover .hover-text p {
+  color: var(--red1);
+  text-align: center;
+}
+.photo-hover .hover-text .hover-category {
+  font-family: "space_mono", sans-serif;
+}
+
+.photo-hover:hover {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

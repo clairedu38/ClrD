@@ -1,0 +1,76 @@
+.catalogue-projet {
+    display: flex;
+    justify-content: space-between;
+
+    .projet {
+        height: 25vw;
+        width: 48%;
+        position: relative;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.photo-hover {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background-color: var(--peach); 
+    display: flex; 
+    padding: 15px; 
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+
+    .hover-eye {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+
+        .eye {
+            width: 3vw;
+            height: auto;
+            min-width: 30px;
+        }
+    }
+
+    .hover-text {
+        color: white;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        h4, p {
+            text-transform: uppercase;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: white;
+
+        }
+
+        p {
+            color: var(--red1);
+            text-align: center;
+        }
+
+        .hover-category {
+            font-family: 'space_mono', sans-serif;
+        }
+    }
+}
+
+.photo-hover:hover {
+    opacity: 1;
+}

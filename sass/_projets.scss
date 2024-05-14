@@ -1,0 +1,90 @@
+
+.project-presentation {
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-family: "Work Sans", sans-serif;
+        color: var(--brown-regular);
+    }
+
+    >div {
+        width: 50%;
+    }
+
+    .logo_project {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            max-width: 300px;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.project-missions {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin-bottom: 40px;
+
+    >div {
+        width: 50%;
+    }
+
+    .project-missions-text {
+
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        li {
+            font-size: 14px ;
+            font-family: "Work Sans", sans-serif;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+img {
+    width:100%;
+}
+
+.contact-projet {
+    background-color: var(--red1);
+    padding: 100px ;
+    text-align: center;
+    margin-top: 50px;
+
+    h3, a {
+        margin-top: 0;
+        color: white;
+    }
+
+    h3 {
+        text-align: center;
+        padding: 0;
+        font-size: 40px;
+    }
+}
+
+.projet-autres {
+
+    margin: 50px 0 100px 0;
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        color: var(--red2);
+    }
+}
