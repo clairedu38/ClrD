@@ -1,7 +1,20 @@
 <?php 
 
-// Ajouter la prise en charge des images mises en avant
-add_theme_support( 'post-thumbnails' );
+// Enregistrement des menus dans WP
+register_nav_menus( array(
+	'header' => 'Menu Principal',
+	'footer' => 'Bas de page',
+) );
 
-// Ajouter automatiquement le titre du site dans l'en-tête du site
-add_theme_support( 'title-tag' );
+function theme_enqueue_styles() {
+    wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/css/style.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+function theme_enqueue_scripts() {
+    wp_enqueue_script( 'menu-script', get_stylesheet_directory_uri() . '/js/header.js', array(), null, true );
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );

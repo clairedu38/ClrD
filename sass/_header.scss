@@ -1,0 +1,133 @@
+header {
+  display: flex;
+  justify-content: space-between; /* Pour séparer le logo et le menu */
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 900;
+  background: white;
+  width: 100%;
+  height: 80px;
+
+  .logo-header {
+    height: 80px;
+    display: flex;
+    align-items: center; 
+    position: absolute;
+    left: 47%;
+    width: 6%;
+
+    img {
+      height: 55px;
+      width: auto;
+    }
+  }
+
+  .menuToggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+      -webkit-touch-callout: none;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: 33px;
+      height: 3px;
+      margin-bottom: 6px;
+      position: relative;
+      background: var(--brown-regular);
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+
+    input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      &:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+    }
+
+    input:checked ~ .menuItem {
+      transform: none;
+    }
+  }
+}
+
+.menuItem {
+  position: absolute;
+  width: 300px;
+  padding: 50px;
+  background: white;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  left: -300px; /* Déplacer le menu hors de la vue par défaut */
+  top: 0;
+  height: 100vh; /* Occupera toute la hauteur de l'écran */
+
+  li {
+    padding: 10px 0;
+    font-size: 22px;
+    color: var(--brown-regular);
+  }
+}
+
+.menu--left {
+  position: relative;
+
+  .menuToggle {
+    input {
+      left: 50px;
+    }
+
+    span {
+      left: 50px;
+    }
+  }
+
+  .menuItem {
+    left: 0;
+    transform: translateX(-100%); /* Cacher le menu en dehors de l'écran */
+    overflow-y: auto; /* Ajouter une barre de défilement si le menu est trop grand */
+  }
+
+  .menuToggle input:checked ~ .menuItem {
+    transform: none; /* Afficher le menu lorsque le toggle est activé */
+  }
+}
