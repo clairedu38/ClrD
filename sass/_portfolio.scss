@@ -1,0 +1,43 @@
+
+
+.titre-principal {
+    font-size: 30px;
+    color: var(--peach);
+    margin: 110px 0 20px 0;
+    text-align: center;
+}
+
+.filtre-expertise {
+    display: flex;
+    justify-content: center;
+    gap : 30px;
+    margin-bottom: 5%;
+
+    p {
+        color: var(--brown-dark);
+        background-color: #EFE1D5;
+        padding: 3px 15px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--beige);
+        }
+    }
+
+    >div:first-child {
+        p {
+            background-color: var(--red1);
+            color: white;
+        }
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+
+    .projet {
+        margin-bottom: 4%;
+    }
+}
+

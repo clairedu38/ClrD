@@ -28,7 +28,7 @@ body .main-container {
 }
 
 section {
-  padding: 0 200px;
+  padding: 0 15%;
 }
 
 a {
@@ -381,15 +381,15 @@ img {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
-.photo-hover .hover-eye {
+.photo-hover .hover-link {
   position: relative;
   display: flex;
   justify-content: center;
 }
-.photo-hover .hover-eye .eye {
-  width: 3vw;
+.photo-hover .hover-link .link {
+  width: 1.5vw;
   height: auto;
-  min-width: 30px;
+  min-width: 10px;
 }
 .photo-hover .hover-text {
   color: white;
@@ -407,7 +407,7 @@ img {
   color: white;
 }
 .photo-hover .hover-text p {
-  color: var(--red1);
+  color: white;
   text-align: center;
 }
 .photo-hover .hover-text .hover-category {
@@ -416,4 +416,39 @@ img {
 
 .photo-hover:hover {
   opacity: 1;
+}
+
+.titre-principal {
+  font-size: 30px;
+  color: var(--peach);
+  margin: 110px 0 20px 0;
+  text-align: center;
+}
+
+.filtre-expertise {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 5%;
+}
+.filtre-expertise p {
+  color: var(--brown-dark);
+  background-color: #EFE1D5;
+  padding: 3px 15px;
+}
+.filtre-expertise p:hover {
+  cursor: pointer;
+  background-color: var(--beige);
+}
+.filtre-expertise > div:first-child p {
+  background-color: var(--red1);
+  color: white;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .projet {
+  margin-bottom: 4%;
 }/*# sourceMappingURL=style.css.map */

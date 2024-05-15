@@ -11,13 +11,13 @@ $expertises = get_the_terms(get_the_ID(), 'expertise');
         <div class="hover-text">
             <h4 class="hover-title"><?php echo get_the_title() ?></h4>
             <p class="hover-category"><?php foreach ($expertises as $expertise) {
-                        echo '/  ' . esc_html($expertise->name) . '  ' ;
+                        echo '/  ' . esc_html($expertise->name) . '  </br>' ;
                     } ?>
             </p>  
         </div>
-        <div class="hover-eye">
+        <div class="hover-link">
             <a href="<?php the_permalink(); ?>">
-            <img class="eye" src="<?php echo get_template_directory_uri()?>/assets/images/Icon_eye.png" alt=""></a>
+            <img class="link" src="<?php echo get_template_directory_uri()?>/assets/images/icon-arrow-white.svg" alt=""></a>
         </div>
     </div>
 </div>

@@ -37,7 +37,7 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
                 <h2 style="color: <?php echo esc_attr($couleur_projet); ?>">Ce qui a été réalisé</h2>
                 <p><?php the_field('ce_qui_a_ete_realise'); ?></p>
                 <div> 
-                    <a href="<?php the_field('lien_du_site'); ?>">Lien vers le site</a>
+                    <a target="_blank" href="<?php the_field('lien_du_site'); ?>">Lien vers le site</a>
                 </div>
             </div>
             <div class="image_vignette">

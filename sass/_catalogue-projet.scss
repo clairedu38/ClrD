@@ -30,15 +30,15 @@
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
 
-    .hover-eye {
+    .hover-link {
         position: relative; 
         display: flex;
         justify-content: center;
 
-        .eye {
-            width: 3vw;
+        .link {
+            width: 1.5vw;
             height: auto;
-            min-width: 30px;
+            min-width: 10px;
         }
     }
 
@@ -61,7 +61,7 @@
         }
 
         p {
-            color: var(--red1);
+            color: white;
             text-align: center;
         }
 
