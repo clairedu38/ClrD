@@ -451,4 +451,145 @@ img {
 }
 .portfolio .projet {
   margin-bottom: 4%;
+}
+
+.banniere-accueil .banniere-accueil-image {
+  width: 100%;
+  height: 50vh;
+}
+.banniere-accueil .banniere-accueil-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banniere-accueil .banniere-accueil-textes {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.banniere-accueil .banniere-accueil-textes h3 {
+  font-size: 50px;
+  margin-top: 150px;
+  margin-bottom: 0;
+  background-color: var(--beige);
+  color: var(--red2);
+  padding: 10px 30px;
+}
+.banniere-accueil .banniere-accueil-textes h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  background-color: var(--beige);
+  color: var(--brown_regular);
+  padding: 10px 30px 30px 30px;
+}
+
+.presentation-accueil {
+  background-color: var(--peach);
+  display: flex;
+  padding: 5% 15%;
+  justify-content: space-between;
+}
+.presentation-accueil .presentation-accueil-image {
+  background-color: white;
+  width: 220px;
+  height: 260px;
+}
+.presentation-accueil .presentation-accueil-texte {
+  color: white;
+  width: 70%;
+  padding-left: 5%;
+}
+.presentation-accueil .presentation-accueil-texte h2, .presentation-accueil .presentation-accueil-texte p, .presentation-accueil .presentation-accueil-texte a {
+  color: white;
+}
+
+.banniere-recommandations {
+  background-color: var(--peach);
+  height: 80px;
+  margin-bottom: 15px;
+}
+.banniere-recommandations p {
+  font-family: "Platypi", serif;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  margin: 0;
+}
+
+.recommandations {
+  margin-bottom: 100px;
+}
+.recommandations h2 {
+  text-align: center;
+  color: var(--red2);
+  margin-top: 100px;
+}
+.recommandations .auteur-citation {
+  color: var(--red2);
+  font-style: italic;
+  font-size: 12px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--red2);
+}
+
+.bloc-expertise {
+  background-color: var(--beige);
+  padding: 50px 15% 60px 15%;
+}
+.bloc-expertise h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.bloc-expertise a {
+  text-align: center;
+}
+.bloc-expertise .liste-expertise {
+  display: flex;
+}
+.bloc-expertise .liste-expertise .service-unique {
+  display: flex;
+  padding: 20px 30px;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.bloc-expertise .liste-expertise .service-unique h4 {
+  font-size: 25px;
+}
+.bloc-expertise .liste-expertise .service-unique p {
+  display: none;
+}
+.bloc-expertise .liste-expertise .service-unique img {
+  width: 60px;
+}
+.bloc-expertise .liste-expertise .service-unique:hover p {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

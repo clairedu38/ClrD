@@ -1,0 +1,47 @@
+.bloc-expertise {
+    background-color: var(--beige);
+    padding: 50px 15% 60px 15%;
+
+
+    h2 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    a {
+        text-align: center;
+    }
+
+    .liste-expertise {
+        display: flex;
+
+        .service-unique {
+
+            display: flex;
+            padding: 20px 30px;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            h4 {
+                font-size: 25px;
+            }
+
+            p {
+                display: none;
+            }
+
+            img {
+                width: 60px;
+            }
+
+            &:hover {
+                p {
+                    display: block;
+                }
+
+            }
+        }       
+    }
+}
