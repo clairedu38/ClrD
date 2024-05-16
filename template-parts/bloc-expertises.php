@@ -18,12 +18,14 @@
             while ($query->have_posts()) {
                 $query->the_post();
                 $iconServices = get_field('icone_du_service');
+                $couleurService = get_field('couleur_service');
                 ?>
                 <div class="service-unique">
                     <img src="<?php echo esc_url($iconServices['url']); ?>" alt="">
-                <h4><?php echo get_the_title() ?></h4>
-                <p><?php the_field('courte_description'); ?>
-                </p>  
+                    <h4>
+                    <?php echo get_the_title() ?></h4>
+                    <p><?php the_field('courte_description'); ?>
+                    </p>  
                 </div>
                 <?php
             }

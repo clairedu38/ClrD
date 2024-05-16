@@ -1,5 +1,5 @@
 .bloc-expertise {
-    background-color: var(--beige);
+    background-color: var(--beige2);
     padding: 50px 15% 60px 15%;
 
 
@@ -25,7 +25,7 @@
             text-align: center;
 
             h4 {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             p {
@@ -33,7 +33,8 @@
             }
 
             img {
-                width: 60px;
+                width: 50px;
+                transition: width 0.2s ease-in-out;
             }
 
             &:hover {
@@ -41,7 +42,18 @@
                     display: block;
                 }
 
+                h4 {
+                    font-size: 25px;
+                    transition: font-size 0.2s ease-in-out;
+                }
+
+                img {
+                    width: 60px;
+                    transition: width 0.2s ease-in-out;
+                }
             }
         }       
     }
 }
+
+    
