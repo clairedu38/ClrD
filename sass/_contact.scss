@@ -1,0 +1,53 @@
+.contact-formulaire {
+ 
+    h2 {
+        color: var(--orange)!important;
+        margin-bottom: 30px;
+    }
+
+    input, textarea {
+        border: none; /* Enlève toutes les bordures */
+        outline: none; /* Enlève le contour lors du focus */
+        padding: 10px;
+        border-radius: 5px;
+        width: 35vw;
+    }
+
+    .texte-formulaire {
+        font-size: 14px ;
+        font-family: "Work Sans", sans-serif;
+        color: var(--brown-regular);
+        background-color: var(--beige2);
+        text-align: center;
+    }
+
+    .envoi-formulaire {
+        font-family: "Work Sans", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--orange);
+        background: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+}
+
+.contact-plus {
+    h2 {
+        color: var(--red1)!important;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 14px ;
+        font-family: "Work Sans", sans-serif!important;
+        color: var(--brown-dark)!important;
+        margin-bottom: 30px;
+    }
+}

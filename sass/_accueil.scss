@@ -45,23 +45,29 @@
     display: flex;
     padding: 5% 15%;
     justify-content: space-between;
+    align-items: center;
 
     &-image {
         background-color: white;
-        width: 220px;
-        height: 260px;
+        width: 15vw;
+        height: 20vw;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
     }
 
     &-texte {
        color: white;
         width: 70%;
         padding-left: 5%;
+        padding-bottom: 5%;
 
         h2, p, a {
             color: white;
-        }
+        }    
     }
-
 }
 
 .accueil-portfolio {

@@ -4,6 +4,7 @@
 <?php 
 get_header();
 $photoClaire = get_field('photo_claire');
+$titre_banniere = get_field('titre_banniere');
 
 ?>
 
@@ -12,8 +13,8 @@ $photoClaire = get_field('photo_claire');
         <img src="<?php echo get_template_directory_uri()?>/assets/images/banniere-accueil.jpg" alt="">
     </div>
     <div class="banniere-accueil-textes">
-        <h3>CLaiRe Duwig</h3>
-        <h1>Graphiste et Webdesigner depuis 10 ans</h1>
+        <h3><?php echo esc_html($titre_banniere); ?></h3>
+        <h1><?php the_field('sous-titre_banniere'); ?></h1>
     </div>
 </div>
 
@@ -22,11 +23,10 @@ $photoClaire = get_field('photo_claire');
         <img src="<?php echo esc_url($photoClaire['url']); ?>" alt="<?php echo esc_attr($photoClaire['alt']); ?>">
     </div>
     <div class="presentation-accueil-texte">
-        <h2> Bienvenue !</h2>
-        <p>Je suis Claire Duwig, graphiste web et print depuis 8 ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h2><?php the_field('titre_bienvenue'); ?></h2>
+        <p><?php the_field('texte_bienvenue'); ?></p>
         <div>
-            <a href="#">Envie d’en découvrir plus ? </a>
+            <a href="#"><?php the_field('texte_du_lien'); ?></a>
         </div>
     </div>
 </div>
