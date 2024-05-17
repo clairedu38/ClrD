@@ -52,7 +52,7 @@ get_header();?>
 
 </div>
 
-<div class="contact-apropos">
+<div class="contact">
     <h3>Mon profil vous interresse ?</h3>
     <div> 
             <a href="#">N'hésitez pas à me contacter</a>

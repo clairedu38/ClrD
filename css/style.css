@@ -86,6 +86,10 @@ p {
   margin-top: 80px;
 }
 
+img {
+  border: none !important;
+}
+
 header {
   display: flex;
   justify-content: space-between; /* Pour séparer le logo et le menu */
@@ -769,19 +773,50 @@ img {
   display: block;
 }
 
-.contact-apropos {
+.contact {
   padding: 100px;
   text-align: center;
   margin-top: 50px;
 }
-.contact-apropos a {
+.contact a {
   margin-top: 0;
   color: var(--brown-dark);
 }
-.contact-apropos h3 {
+.contact h3 {
   text-align: center;
   padding: 0;
   font-size: 40px;
   color: var(--red1);
+  margin-top: 0;
+}
+
+.contact-expertise {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-expertise h3 {
+  font-size: 30px;
+}
+.contact-expertise-plus {
+  padding: 100px;
+  text-align: center;
+  margin-top: 50px;
+}
+.contact-expertise-plus > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-expertise-plus a {
+  margin-top: 0;
+  color: var(--brown-dark);
+  margin-top: 10px;
+}
+.contact-expertise-plus h3 {
+  text-align: center;
+  padding: 0;
+  color: var(--orange);
   margin-top: 0;
 }/*# sourceMappingURL=style.css.map */
