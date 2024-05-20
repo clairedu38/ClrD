@@ -1,3 +1,8 @@
+.project {
+    background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+    background-size:auto;
+    padding-bottom: 50px;
+}
 
 .project-presentation {
     display: flex;
@@ -64,7 +69,6 @@ img {
     background-color: var(--red1);
     padding: 100px ;
     text-align: center;
-    margin-top: 50px;
 
     h3, a {
         margin-top: 0;

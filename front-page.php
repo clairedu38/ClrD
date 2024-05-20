@@ -6,10 +6,6 @@ get_header();
 $photoClaire = get_field('photo_claire');
 $titreBanniere = get_field('titre_banniere');
 $photoBanniereAccueil = get_field('banniere_accueil');
-
-$contact = get_field('profil_linkedin','12');
-
-
 ?>
 
 <div class="banniere-accueil">
@@ -38,7 +34,6 @@ $contact = get_field('profil_linkedin','12');
 <div class="accueil-portfolio">
     <div>
         <h2>Mes réalisations</h2>
-        <?php echo $contact; ?>
     </div>
     <div class="accueil-portfolio-projets">
     <?php

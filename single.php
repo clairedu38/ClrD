@@ -16,7 +16,7 @@ $lien_existant = get_field('lien_existant');
 $expertises = wp_get_post_terms($post_id, 'expertise');
 ?>
 
-    <section>
+    <section class="project">
         <div class="project-presentation">
             <div>
                 <h4>

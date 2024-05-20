@@ -280,6 +280,12 @@ footer .second-footer p a {
   font-family: "Work Sans", sans-serif;
 }
 
+.project {
+  background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+  background-size: auto;
+  padding-bottom: 50px;
+}
+
 .project-presentation {
   display: flex;
   padding-top: 80px;
@@ -336,7 +342,6 @@ img {
   background-color: var(--red1);
   padding: 100px;
   text-align: center;
-  margin-top: 50px;
 }
 .contact-projet h3, .contact-projet a {
   margin-top: 0;
