@@ -24,18 +24,19 @@
             font-size: 50px;
             margin-top: 150px;
             margin-bottom: 0;
-            background-color: var(--beige);
+            background-color: white;
             color: var(--red2);
             padding: 10px 30px;
+            margin-bottom: 10px;
         }
 
         h1 {
             font-family: "Work Sans", sans-serif;
             font-size: 20px;
             margin-top: 0;
-            background-color: var(--beige);
+            background-color: white;
             color: var(--brown_regular);
-            padding: 10px 30px 30px 30px;
+            padding: 10px 30px 10px 30px;
         }
     }
 }
@@ -43,18 +44,18 @@
 .presentation-accueil {
     background-color: var(--peach);
     display: flex;
-    padding: 5% 15%;
+    padding: 8% 15%;
     justify-content: space-between;
     align-items: center;
 
     &-image {
-        background-color: white;
         width: 15vw;
         height: 20vw;
 
         img {
             object-fit: cover;
             height: 100%;
+            border-radius: 0 80% 80% 0;
         }
     }
 
@@ -72,8 +73,12 @@
 
 .accueil-portfolio {
 
+    background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+    background-size: contain;
+
     h2 {
-        margin-top: 80px;
+        padding-top: 80px;
+        margin-top: 0;
         text-align: center;
         color: var(--red2);
     }
@@ -138,6 +143,7 @@
         display: flex;
         display: flex;
         justify-content: center;
-        margin: 5%;
+        margin: 5% 5% 0% 5%;
+        padding-bottom: 5%;
     }
 }

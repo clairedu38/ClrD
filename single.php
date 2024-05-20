@@ -10,6 +10,7 @@ $image_vignette = get_field('image_vignette');
 $image_fullscreen = get_field('image_plein_ecran');
 $titre = get_the_title();
 $couleur_projet = get_field('couleur_du_projet');
+$lien_existant = get_field('lien_existant');
 
 // Récupération de la catégorie + vérification de la présence d'un terme dans cette catégorie
 $expertises = wp_get_post_terms($post_id, 'expertise');
@@ -33,16 +34,23 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
         </div>
 
         <div class="project-missions">
+
             <div class="project-missions-text">
                 <h2 style="color: <?php echo esc_attr($couleur_projet); ?>">Ce qui a été réalisé</h2>
                 <p><?php the_field('ce_qui_a_ete_realise'); ?></p>
+
+            <!-- Si un lien existe, alors on affiche le lien -->
+                <?php if ($lien_existant): ?>
                 <div> 
-                    <a target="_blank" href="<?php the_field('lien_du_site'); ?>">Lien vers le site</a>
+                    <a class="lien-site-projet" target="_blank" href="<?php the_field('lien_du_site'); ?>">Lien vers le site</a>
                 </div>
+                <?php endif; ?>
             </div>
+
             <div class="image_vignette">
                 <img src="<?php echo esc_url($image_vignette['url']); ?>" alt="<?php echo esc_attr($image_vignette['alt']); ?>">
             </div>
+            
         </div>
     
         <div class="photo-fullscreen">
