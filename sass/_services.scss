@@ -8,10 +8,6 @@
         padding-bottom: 50px;
     }
 
-    a {
-        text-align: center;
-    }
-
     .liste-expertise {
         display: flex;
 
@@ -53,6 +49,32 @@
                 }
             }
         }       
+    }
+
+    &-plus {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+
+        .bouton {
+            border-bottom: 2px solid var(--red2);
+        
+            span {
+                color: var(--brown-dark);
+                transition: 0.3s  ease-in-out;
+            }
+
+            i {
+                color: var(--red2);
+            }        
+        
+            &:hover {
+                i, span {
+                    color: white;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
     }
 }
 

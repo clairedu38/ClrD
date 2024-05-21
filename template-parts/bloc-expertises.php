@@ -33,8 +33,11 @@
         }?>
     </div>
 
-    <div>
-        <a href="#">En savoir plus</a>
+    <div class="bloc-expertise-plus">
+    <a class="bouton" href="<?php echo home_url('/a-propos'); ?>">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>En savoir plus</span>
+            </a>
     </div>
 
 

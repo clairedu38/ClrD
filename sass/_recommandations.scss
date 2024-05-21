@@ -33,7 +33,9 @@
     width: 100%;
     padding-top: 0;
     padding-bottom: 50px;
+    overflow: initial!important;
 }
+
   
 .swiper-slide {
     background-position: center;
@@ -51,4 +53,9 @@
 
 .swiper-pagination-bullet-active {
     background: var(--red2);
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
 }

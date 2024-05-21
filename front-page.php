@@ -25,8 +25,12 @@ $photoBanniereAccueil = get_field('banniere_accueil');
     <div class="presentation-accueil-texte">
         <h2><?php the_field('titre_bienvenue'); ?></h2>
         <p><?php the_field('texte_bienvenue'); ?></p>
+        
         <div>
-            <a href="#"><?php the_field('texte_du_lien'); ?></a>
+            <a class="bouton" href="<?php echo home_url('/a-propos'); ?>">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span><?php the_field('texte_du_lien'); ?></span>
+            </a>
         </div>
     </div>
 </div>
@@ -65,7 +69,7 @@ $photoBanniereAccueil = get_field('banniere_accueil');
                         <img src="<?php echo esc_url($vignette['url']); ?>" alt="<?php echo esc_attr($vignette['alt']); ?>">
                     </a>
                     <div>
-                        <h4><?php echo get_the_title() ?></h4>
+                        <h3><?php echo get_the_title() ?></h3>
                         <p class="hover-category"><?php foreach ($expertises as $expertise) {
                         echo '/  ' . esc_html($expertise->name) . '  </br>' ;
                         } ?>
@@ -77,13 +81,17 @@ $photoBanniereAccueil = get_field('banniere_accueil');
             wp_reset_postdata(); // réinitialisation de la requête
         }?>
     </div>
+
     <div class="accueil-portfolio-lien">
-        <a href="#">Découvrir l'ensemble de mon portfolio </a>
+        <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Découvrir l'ensemble de mon portfolio</span>
+        </a>
     </div>
 
 </div>
 
-<div>
+<div class="accueil-recommandations">
 <?php get_template_part('template-parts/bloc-expertises'); ?>
 </div>
 

@@ -3,7 +3,7 @@ $vignette = get_field('image_vignette');
 $expertises = get_the_terms(get_the_ID(), 'expertise');
 ?>
 
-<div class="projet">
+<div class="projet-image">
 
     <img src="<?php echo esc_url($vignette['url']); ?>" alt="<?php echo esc_attr($vignette['alt']); ?>">
 
@@ -17,7 +17,7 @@ $expertises = get_the_terms(get_the_ID(), 'expertise');
         </div>
         <div class="hover-link">
             <a href="<?php the_permalink(); ?>">
-                <img class="link" src="<?php echo get_template_directory_uri()?>/assets/images/icon-arrow-white.svg" alt="">
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
     </div>

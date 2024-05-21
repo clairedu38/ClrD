@@ -38,15 +38,6 @@ section {
     padding: 0 15%;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-
-    &:hover {
-        font-weight: bold;
-    }
-  }
 
 h1 {
     font-size: 50px;
@@ -98,4 +89,76 @@ p {
 img {
     border: none!important;
 }
+
+
   
+
+// MISE EN FORME BOUTONS
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.bouton {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px 8px 10px;
+    border-bottom: 2px solid var(--red2);
+    cursor: pointer;
+
+    span, i {
+        z-index: 2;
+        color: white;
+        font-size: 19px;
+    }
+
+    i {
+        color: var(--red2);
+        transition: 0.2s 0.1s ease-in-out;
+    }
+  
+    &:before {
+      content: "";
+      background-color: var(--red2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+    }
+  
+    &:hover {
+        i {
+            color: white;
+            transition: 0.2s ease-in-out;
+        }
+
+        &:before {
+        width: 100%;
+        }
+    }
+  }
+
+  // ANIMATION FLECHE BOUTON
+
+  @keyframes bounce {
+	0%, 100%, 50%, 80% {
+		transform: translateX(0)
+	}
+	40% {
+		transform: translateX(-8px)
+	}
+	60% {
+		transform: translateX(-3px)
+	}
+}
+
+i:hover, .arrow:hover {
+    animation: bounce 0.5s ease-in-out;
+}

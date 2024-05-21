@@ -55,7 +55,10 @@ get_header();?>
 <div class="contact">
     <h3>Mon profil vous interresse ?</h3>
     <div> 
-            <a href="#">N'hésitez pas à me contacter</a>
+        <a class="bouton" href="<?php echo home_url('/contact'); ?>">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>N'hésitez pas à me contacter</span>
+        </a>
     </div>
 </div> 
 

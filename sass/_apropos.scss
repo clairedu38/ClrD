@@ -76,15 +76,28 @@
 
     a {
         margin-top: 0;
-        color: var(--brown-dark);
     }
 
     h3 {
         text-align: center;
         padding: 0;
         font-size: 40px;
-        color: var(--red1);
+        color: var(--red2);
         margin-top: 0;
+    }
+
+    .bouton {
+        span {
+            color: var(--brown-regular);
+            transition: 0.2s ease-in-out;
+        }
+      
+        &:hover {
+            i, span {
+                color: white;
+                transition: 0.2s ease-in-out;
+            }
+        }
     }
 }
 
@@ -124,6 +137,30 @@
             padding: 0;
             color: var(--orange);
             margin-top: 0;
+        }
+
+        .bouton {
+            border-bottom: 2px solid var(--orange);
+
+            span {
+                color: var(--brown-regular);
+                transition: 0.2s ease-in-out;
+            }
+            
+            &:before {
+                background-color: var(--orange);
+            }
+
+            i {
+                color: var(--orange);
+            }
+          
+            &:hover {
+                i, span {
+                    color: white;
+                    transition: 0.2s ease-in-out;
+                }
+            }
         }
     }
 }

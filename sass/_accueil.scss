@@ -67,13 +67,19 @@
 
         h2, p, a {
             color: white;
-        }    
+        }   
+        
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
     }
 }
 
 .accueil-portfolio {
 
-    background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+    background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
     background-size: contain;
 
     h2 {
@@ -141,9 +147,29 @@
 
     &-lien {
         display: flex;
-        display: flex;
-        justify-content: center;
-        margin: 5% 5% 0% 5%;
+        justify-content: flex-end;
+        margin: 0 15% 0% 5%;
         padding-bottom: 5%;
+
+        .bouton {
+            border-bottom: 2px solid var(--red1);
+        
+            span {
+                color: var(--orange);
+                transition: 0.3s  ease-in-out;
+            }
+
+            i {
+                color: var(--red1);
+            }
+        
+        
+            &:hover {
+                i, span {
+                    color: white;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
     }
 }

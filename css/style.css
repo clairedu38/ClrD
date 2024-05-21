@@ -32,15 +32,6 @@ section {
   padding: 0 15%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-a:hover {
-  font-weight: bold;
-}
-
 h1 {
   font-size: 50px;
   margin: 65px 0;
@@ -88,6 +79,64 @@ p {
 
 img {
   border: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.bouton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 8px 10px;
+  border-bottom: 2px solid var(--red2);
+  cursor: pointer;
+}
+.bouton span, .bouton i {
+  z-index: 2;
+  color: white;
+  font-size: 19px;
+}
+.bouton i {
+  color: var(--red2);
+  transition: 0.2s 0.1s ease-in-out;
+}
+.bouton:before {
+  content: "";
+  background-color: var(--red2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.bouton:hover i {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.bouton:hover:before {
+  width: 100%;
+}
+
+@keyframes bounce {
+  0%, 100%, 50%, 80% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-8px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+}
+i:hover, .arrow:hover {
+  animation: bounce 0.5s ease-in-out;
 }
 
 header {
@@ -144,7 +193,7 @@ header .menuToggle span {
   height: 3px;
   margin-bottom: 6px;
   position: relative;
-  background: var(--brown-regular);
+  background: var(--red2);
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -159,6 +208,7 @@ header .menuToggle span:nth-last-child(2) {
 header .menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
 }
 header .menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
@@ -174,29 +224,33 @@ header .menuToggle input:checked ~ .menuItem {
 .menuItem {
   position: absolute;
   width: 300px;
-  padding: 50px;
-  background: white;
+  padding: 80px 50px 50px 50px;
+  background: var(--red2);
   list-style-type: none;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   left: -300px; /* Déplacer le menu hors de la vue par défaut */
   top: 0;
   height: 100vh; /* Occupera toute la hauteur de l'écran */
+  margin: 0;
 }
 .menuItem li {
   padding: 10px 0;
   font-size: 22px;
-  color: var(--brown-regular);
+  color: white;
 }
 
 .menu--left {
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 .menu--left .menuToggle input {
   left: 50px;
+  top: 28px;
 }
 .menu--left .menuToggle span {
   left: 50px;
+  top: 28px;
 }
 .menu--left .menuItem {
   left: 0;
@@ -217,7 +271,7 @@ footer {
 }
 footer .first-footer {
   background-color: var(--beige2);
-  background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond.jpg");
   background-size: contain;
   width: 100%;
   display: flex;
@@ -268,7 +322,7 @@ footer .first-footer .footer-contact > div img {
   width: 50px;
 }
 footer .second-footer {
-  background-color: var(--red1);
+  background-color: var(--red2);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -281,7 +335,7 @@ footer .second-footer p a {
 }
 
 .project {
-  background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
   background-size: auto;
   padding-bottom: 50px;
 }
@@ -333,6 +387,23 @@ footer .second-footer p a {
   font-family: "Work Sans", sans-serif;
   margin-bottom: 20px;
 }
+.project-missions .project-missions-text .bouton {
+  border-bottom: 2px solid var(--brown-dark);
+}
+.project-missions .project-missions-text .bouton span {
+  color: var(--brown-dark);
+  transition: 0.3s ease-in-out;
+}
+.project-missions .project-missions-text .bouton i {
+  color: var(--brown-dark);
+}
+.project-missions .project-missions-text .bouton:before {
+  background-color: var(--brown-dark);
+}
+.project-missions .project-missions-text .bouton:hover i, .project-missions .project-missions-text .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
 
 img {
   width: 100%;
@@ -352,6 +423,23 @@ img {
   padding: 0;
   font-size: 40px;
 }
+.contact-projet .bouton {
+  border-bottom: 2px solid white;
+}
+.contact-projet .bouton span {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.contact-projet .bouton i {
+  color: white;
+}
+.contact-projet .bouton:before {
+  background-color: white;
+}
+.contact-projet .bouton:hover i, .contact-projet .bouton:hover span {
+  color: var(--red1);
+  transition: 0.2s ease-in-out;
+}
 
 .projet-autres {
   margin: 50px 0 100px 0;
@@ -366,10 +454,11 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.catalogue-projet .projet {
+.catalogue-projet .projet-image {
   height: 25vw;
   width: 48%;
   position: relative;
+  margin-bottom: 4%;
 }
 .catalogue-projet img {
   -o-object-fit: cover;
@@ -425,6 +514,10 @@ img {
 .photo-hover .hover-text .hover-category {
   font-family: "space_mono", sans-serif;
 }
+.photo-hover i {
+  color: white;
+  font-size: 20px;
+}
 
 .photo-hover:hover {
   opacity: 1;
@@ -465,9 +558,28 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
 }
 .portfolio .projet {
   margin-bottom: 4%;
+}
+
+.portfolio-taxonomie h1 {
+  margin-bottom: 7%;
+  line-height: 2;
+}
+.portfolio-taxonomie h1 strong {
+  color: white;
+  background-color: var(--red2);
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+.portfolio-taxonomie .contact {
+  padding: 50px 20%;
+  margin-top: 50px;
 }
 
 .banniere-accueil-image {
@@ -532,9 +644,14 @@ img {
 .presentation-accueil-texte h2, .presentation-accueil-texte p, .presentation-accueil-texte a {
   color: white;
 }
+.presentation-accueil-texte p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
 
 .accueil-portfolio {
-  background-image: url("http://localhost/CRLD/wp-content/uploads/2024/05/fond2.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
   background-size: contain;
 }
 .accueil-portfolio h2 {
@@ -591,10 +708,23 @@ img {
 }
 .accueil-portfolio-lien {
   display: flex;
-  display: flex;
-  justify-content: center;
-  margin: 5% 5% 0% 5%;
+  justify-content: flex-end;
+  margin: 0 15% 0% 5%;
   padding-bottom: 5%;
+}
+.accueil-portfolio-lien .bouton {
+  border-bottom: 2px solid var(--red1);
+}
+.accueil-portfolio-lien .bouton span {
+  color: var(--orange);
+  transition: 0.3s ease-in-out;
+}
+.accueil-portfolio-lien .bouton i {
+  color: var(--red1);
+}
+.accueil-portfolio-lien .bouton:hover i, .accueil-portfolio-lien .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 .banniere-recommandations {
@@ -628,6 +758,7 @@ img {
   width: 100%;
   padding-top: 0;
   padding-bottom: 50px;
+  overflow: initial !important;
 }
 
 .swiper-slide {
@@ -648,6 +779,11 @@ img {
   background: var(--red2);
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .bloc-expertise {
   background-color: var(--beige2);
   padding: 50px 15% 60px 15%;
@@ -655,9 +791,6 @@ img {
 .bloc-expertise h2 {
   text-align: center;
   padding-bottom: 50px;
-}
-.bloc-expertise a {
-  text-align: center;
 }
 .bloc-expertise .liste-expertise {
   display: flex;
@@ -690,6 +823,25 @@ img {
 .bloc-expertise .liste-expertise .service-unique:hover img {
   width: 60px;
   transition: width 0.2s ease-in-out;
+}
+.bloc-expertise-plus {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.bloc-expertise-plus .bouton {
+  border-bottom: 2px solid var(--red2);
+}
+.bloc-expertise-plus .bouton span {
+  color: var(--brown-dark);
+  transition: 0.3s ease-in-out;
+}
+.bloc-expertise-plus .bouton i {
+  color: var(--red2);
+}
+.bloc-expertise-plus .bouton:hover i, .bloc-expertise-plus .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 .contact-formulaire h2 {
@@ -799,14 +951,21 @@ img {
 }
 .contact a {
   margin-top: 0;
-  color: var(--brown-dark);
 }
 .contact h3 {
   text-align: center;
   padding: 0;
   font-size: 40px;
-  color: var(--red1);
+  color: var(--red2);
   margin-top: 0;
+}
+.contact .bouton span {
+  color: var(--brown-regular);
+  transition: 0.2s ease-in-out;
+}
+.contact .bouton:hover i, .contact .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 .contact-expertise {
@@ -838,4 +997,21 @@ img {
   padding: 0;
   color: var(--orange);
   margin-top: 0;
+}
+.contact-expertise-plus .bouton {
+  border-bottom: 2px solid var(--orange);
+}
+.contact-expertise-plus .bouton span {
+  color: var(--brown-regular);
+  transition: 0.2s ease-in-out;
+}
+.contact-expertise-plus .bouton:before {
+  background-color: var(--orange);
+}
+.contact-expertise-plus .bouton i {
+  color: var(--orange);
+}
+.contact-expertise-plus .bouton:hover i, .contact-expertise-plus .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

@@ -16,8 +16,8 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 function theme_enqueue_scripts() {
     wp_enqueue_script( 'menu-script', get_stylesheet_directory_uri() . '/js/header.js', array(), null, true );
-    wp_enqueue_script( 'portfolio-script', get_stylesheet_directory_uri() . '/js/portfolio.js', array(), null, true );
     wp_enqueue_script( 'reco-script', get_stylesheet_directory_uri() . '/js/recommandations.js', array(), null, true );
+    wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/06b62cd2a4.js', array(), null, true );
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     if ( is_page_template('portfolio.php') ) {
         wp_enqueue_script( 'portfolio-script', get_stylesheet_directory_uri() . '/js/portfolio.js', array(), null, true );
@@ -40,13 +40,6 @@ function filter_posts() {
     }
    
     $filterExpertise = $_POST['expertises'];
-
-    if (isset($_GET['expertise'])) {
-        $filterExpertise = sanitize_text_field($_GET['expertise']);
-    }
-
-    // Affichage de la variable de filtre pour le débogage
-    echo $filterExpertise;
 
     $args = array(
         'post_type' => 'projet',
@@ -78,8 +71,6 @@ function filter_posts() {
         }
         wp_reset_postdata(); // réinitialisation de la requête
     }
-
-    echo $filterExpertise;
 
     wp_die();
    

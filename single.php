@@ -42,7 +42,10 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
             <!-- Si un lien existe, alors on affiche le lien -->
                 <?php if ($lien_existant): ?>
                 <div> 
-                    <a class="lien-site-projet" target="_blank" href="<?php the_field('lien_du_site'); ?>">Lien vers le site</a>
+                    <a class="bouton lien-site-projet" target="_blank" href="<?php the_field('lien_du_site'); ?>">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>Lien vers le site</span>
+                    </a>
                 </div>
                 <?php endif; ?>
             </div>
@@ -62,7 +65,10 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
     <div class="contact-projet">
         <h3>Ce projet vous parle ?</h3>
         <div> 
-                <a href="#">N'hésitez pas à me contacter</a>
+            <a class="bouton" target="_blank" href="<?php echo home_url('/contact'); ?>">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>N'hésitez pas à me contacter</span>
+            </a>
         </div>
     </div> 
         
