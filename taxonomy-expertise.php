@@ -47,7 +47,7 @@ get_header();?>
     <div class="contact">
     <h3>Vous souhaitez découvrir plus de projets ?</h3>
     <div> 
-        <a class="bouton" href="<?php echo home_url('/contact'); ?>">
+        <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
             <i class="fa-solid fa-arrow-right"></i>
             <span>Voir tous les projets</span>
         </a>

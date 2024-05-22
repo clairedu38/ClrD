@@ -271,7 +271,7 @@ footer {
 }
 footer .first-footer {
   background-color: var(--beige2);
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair.webp");
   background-size: contain;
   width: 100%;
   display: flex;
@@ -335,7 +335,7 @@ footer .second-footer p a {
 }
 
 .project {
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
   background-size: auto;
   padding-bottom: 50px;
 }
@@ -651,7 +651,7 @@ img {
 }
 
 .accueil-portfolio {
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
+  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
   background-size: contain;
 }
 .accueil-portfolio h2 {
@@ -674,7 +674,7 @@ img {
   margin-top: 100px;
   z-index: 800;
 }
-.accueil-portfolio-projets > div h4 {
+.accueil-portfolio-projets > div h3 {
   font-size: 15px;
   margin-bottom: 0;
 }
@@ -713,14 +713,14 @@ img {
   padding-bottom: 5%;
 }
 .accueil-portfolio-lien .bouton {
-  border-bottom: 2px solid var(--red1);
+  border-bottom: 2px solid var(--red2);
 }
 .accueil-portfolio-lien .bouton span {
   color: var(--orange);
   transition: 0.3s ease-in-out;
 }
 .accueil-portfolio-lien .bouton i {
-  color: var(--red1);
+  color: var(--red2);
 }
 .accueil-portfolio-lien .bouton:hover i, .accueil-portfolio-lien .bouton:hover span {
   color: white;

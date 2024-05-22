@@ -79,7 +79,7 @@
 
 .accueil-portfolio {
 
-    background-image: url("http://localhost/claire/wp-content/uploads/2024/05/fond2.jpg");
+    background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
     background-size: contain;
 
     h2 {
@@ -103,7 +103,7 @@
             margin-top: 100px;
             z-index: 800;
 
-            h4 {
+            h3 {
                 font-size: 15px;
                 margin-bottom: 0;
             }
@@ -152,7 +152,7 @@
         padding-bottom: 5%;
 
         .bouton {
-            border-bottom: 2px solid var(--red1);
+            border-bottom: 2px solid var(--red2);
         
             span {
                 color: var(--orange);
@@ -160,7 +160,7 @@
             }
 
             i {
-                color: var(--red1);
+                color: var(--red2);
             }
         
         
