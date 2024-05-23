@@ -7,6 +7,11 @@
         width: 48%;
         position: relative;
         margin-bottom: 4%;
+
+        @media (max-width: $breakpoint__large_phone) {
+            height: 80vw;
+            width: 80vw;    
+        }
     }
 
     img {

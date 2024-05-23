@@ -16,6 +16,10 @@
 
     margin-bottom: 100px;
 
+    @media (max-width: $breakpoint__large_phone) {
+        margin-bottom: 50px;
+    }
+
     h2 {
         text-align: center;
         color: var(--red2);

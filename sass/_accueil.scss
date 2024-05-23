@@ -79,7 +79,7 @@
 
 .accueil-portfolio {
 
-    background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
+    background-image: url("../assets/images/banniere-pattern-clair-2.webp");
     background-size: contain;
 
     h2 {
@@ -170,6 +170,97 @@
                     transition: 0.2s ease-in-out;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: $breakpoint__tab) {
+    .banniere-accueil {
+  
+        &-textes {
+            top: 0%;
+            right: 10%;
+            transition: all 0.3s ease-in-out;
+        }
+    }       
+    .presentation-accueil {
+        padding: 8% 10%;
+    }
+    .accueil-portfolio-projets {
+        margin: 15px 10%;
+
+        &-image {
+            height: auto;
+
+            &:hover {
+                height: auto;
+                width: 110%;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint__large_phone) {
+
+    .banniere-accueil {
+        &-textes {
+            top: 15%;
+            right: 15%;
+            width: 70%;
+            align-items: center;
+            text-align: center;
+    
+            h3 {
+                font-size: 30px;
+                margin-top: 20px;
+            }
+    
+            h1 {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .presentation-accueil {
+        padding: 8% 10%;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    
+        &-image {
+            display: none;
+        }
+    
+        &-texte {
+            width: auto;
+            padding: 0;
+        }
+    }
+    
+    .accueil-portfolio {
+        background-size: cover;
+        padding-bottom: 10%;
+    
+        &-projets {
+            flex-direction: column;
+    
+            >div {
+                margin-top: 40px;
+            }
+ 
+            &-image {
+                height: 50vw;             
+        
+                &:hover {
+                    height: 25vw;
+                    width: 110%;
+                    transition: height 0.5s ease-in-out, width 0.5s ease-in-out;;
+                }
+            }
+        }
+    
+        &-lien {
+            justify-content: center;
+            margin: 0 5% 0% 5%;
         }
     }
 }

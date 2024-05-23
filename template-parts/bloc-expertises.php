@@ -34,7 +34,7 @@
     </div>
 
     <div class="bloc-expertise-plus">
-    <a class="bouton" href="<?php echo home_url('/a-propos'); ?>">
+    <a class="bouton" href="<?php echo home_url('/expertises'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
                 <span>En savoir plus</span>
             </a>

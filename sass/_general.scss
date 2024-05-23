@@ -11,7 +11,7 @@
 
 // BREAKPOINT MEDIA QUERY
 
-$breakpoint__large_phone: 700px;
+$breakpoint__large_phone: 760px;
 $breakpoint__tab: 1115px;
 
 * {
@@ -62,7 +62,6 @@ p {
     font-size: 14px ;
     font-family: "Work Sans", sans-serif;
 }
-
 
 .btn-submit {
     border-radius: 2px;
@@ -162,3 +161,10 @@ a {
 i:hover, .arrow:hover {
     animation: bounce 0.5s ease-in-out;
 }
+
+@media (max-width: $breakpoint__tab) {
+    
+    section {
+        padding: 0 10%;
+    }
+  }

@@ -78,4 +78,11 @@
     }
 }
 
+@media (max-width: $breakpoint__large_phone) {
+    .liste-expertise {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
     

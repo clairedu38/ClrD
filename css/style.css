@@ -139,9 +139,14 @@ i:hover, .arrow:hover {
   animation: bounce 0.5s ease-in-out;
 }
 
+@media (max-width: 1115px) {
+  section {
+    padding: 0 10%;
+  }
+}
 header {
   display: flex;
-  justify-content: space-between; /* Pour séparer le logo et le menu */
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
@@ -155,9 +160,18 @@ header .logo-header {
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 47%;
+  right: 47%;
   width: 6%;
+  transition: all 0.3s ease;
+}
+@media (max-width: 760px) {
+  header .logo-header {
+    justify-content: flex-end;
+    right: 15%;
+    transition: all 0.3s ease-in-out;
+  }
 }
 header .logo-header img {
   height: 55px;
@@ -271,7 +285,7 @@ footer {
 }
 footer .first-footer {
   background-color: var(--beige2);
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair.webp");
+  background-image: url("../assets/images/banniere-pattern-clair.webp");
   background-size: contain;
   width: 100%;
   display: flex;
@@ -334,8 +348,761 @@ footer .second-footer p a {
   font-family: "Work Sans", sans-serif;
 }
 
+@media (max-width: 760px) {
+  footer .first-footer {
+    flex-direction: column-reverse;
+    padding: 4vh 0 1vh 0;
+  }
+  footer .first-footer > div {
+    width: 70vw;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  footer .first-footer .footer-contact {
+    align-items: center;
+    margin-right: 0px;
+  }
+  footer .first-footer .footer-contact h3 {
+    text-align: center;
+  }
+  footer .first-footer .footer-contact > div {
+    height: auto;
+  }
+  footer .first-footer .footer-menu {
+    align-items: center;
+    margin: 0;
+  }
+  .second-footer p {
+    text-align: center;
+  }
+}
+.catalogue-projet {
+  display: flex;
+  justify-content: space-between;
+}
+.catalogue-projet .projet-image {
+  height: 25vw;
+  width: 48%;
+  position: relative;
+  margin-bottom: 4%;
+}
+@media (max-width: 760px) {
+  .catalogue-projet .projet-image {
+    height: 80vw;
+    width: 80vw;
+  }
+}
+.catalogue-projet img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--peach);
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.photo-hover .hover-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.photo-hover .hover-link .link {
+  width: 1.5vw;
+  height: auto;
+  min-width: 10px;
+}
+.photo-hover .hover-text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-hover .hover-text h4, .photo-hover .hover-text p {
+  text-transform: uppercase;
+}
+.photo-hover .hover-text h4 {
+  font-size: 20px;
+  color: white;
+}
+.photo-hover .hover-text p {
+  color: white;
+  text-align: center;
+}
+.photo-hover .hover-text .hover-category {
+  font-family: "space_mono", sans-serif;
+}
+.photo-hover i {
+  color: white;
+  font-size: 20px;
+}
+
+.photo-hover:hover {
+  opacity: 1;
+}
+
+.titre-principal {
+  font-size: 30px;
+  color: var(--peach);
+  margin: 110px 10% 20px 10%;
+  text-align: center;
+}
+
+.filtre-expertise {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 15px;
+  margin-bottom: 5%;
+}
+.filtre-expertise p {
+  color: var(--brown-dark);
+  background-color: #EFE1D5;
+  padding: 3px 15px;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  margin: 0;
+}
+.filtre-expertise p:hover {
+  cursor: pointer;
+  background-color: var(--beige);
+  transition: background-color 0.3s ease-in-out;
+}
+.filtre-expertise .selected p {
+  background-color: var(--red1);
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+}
+@media (max-width: 760px) {
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.portfolio .projet {
+  margin-bottom: 4%;
+}
+
+.portfolio-taxonomie h1 {
+  margin-bottom: 7%;
+  text-align: left;
+  margin-left: 0;
+}
+.portfolio-taxonomie h1 strong {
+  color: white;
+  background-color: var(--red2);
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  line-height: 2;
+}
+@media (max-width: 760px) {
+  .portfolio-taxonomie h1 strong {
+    font-size: 20px;
+  }
+}
+.portfolio-taxonomie .contact {
+  padding: 50px 20%;
+  margin-top: 50px;
+}
+
+.banniere-accueil-image {
+  width: 100%;
+  height: 50vh;
+}
+.banniere-accueil-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banniere-accueil-textes {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.banniere-accueil-textes h3 {
+  font-size: 50px;
+  margin-top: 150px;
+  margin-bottom: 0;
+  background-color: white;
+  color: var(--red2);
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+.banniere-accueil-textes h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  background-color: white;
+  color: var(--brown_regular);
+  padding: 10px 30px 10px 30px;
+}
+
+.presentation-accueil {
+  background-color: var(--peach);
+  display: flex;
+  padding: 8% 15%;
+  justify-content: space-between;
+  align-items: center;
+}
+.presentation-accueil-image {
+  width: 15vw;
+  height: 20vw;
+}
+.presentation-accueil-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 0 80% 80% 0;
+}
+.presentation-accueil-texte {
+  color: white;
+  width: 70%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+.presentation-accueil-texte h2, .presentation-accueil-texte p, .presentation-accueil-texte a {
+  color: white;
+}
+.presentation-accueil-texte p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.accueil-portfolio {
+  background-image: url("../assets/images/banniere-pattern-clair-2.webp");
+  background-size: contain;
+}
+.accueil-portfolio h2 {
+  padding-top: 80px;
+  margin-top: 0;
+  text-align: center;
+  color: var(--red2);
+}
+.accueil-portfolio-projets {
+  display: flex;
+  margin: 15px 15%;
+  justify-content: center;
+}
+.accueil-portfolio-projets > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+  z-index: 800;
+}
+.accueil-portfolio-projets > div h3 {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.accueil-portfolio-projets > div p {
+  font-size: 11px;
+  margin-top: 5px;
+  color: var(--peach);
+}
+.accueil-portfolio-projets > div:last-child, .accueil-portfolio-projets > div:first-child {
+  margin-top: 40px;
+  z-index: 1;
+}
+.accueil-portfolio-projets > div:hover {
+  z-index: 850;
+}
+.accueil-portfolio-projets-image {
+  height: 20vw;
+  width: 100%;
+  transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+.accueil-portfolio-projets-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.accueil-portfolio-projets-image:hover {
+  height: 25vw;
+  width: 110%;
+  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+.accueil-portfolio-lien {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 15% 0% 5%;
+  padding-bottom: 5%;
+}
+.accueil-portfolio-lien .bouton {
+  border-bottom: 2px solid var(--red2);
+}
+.accueil-portfolio-lien .bouton span {
+  color: var(--orange);
+  transition: 0.3s ease-in-out;
+}
+.accueil-portfolio-lien .bouton i {
+  color: var(--red2);
+}
+.accueil-portfolio-lien .bouton:hover i, .accueil-portfolio-lien .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1115px) {
+  .banniere-accueil-textes {
+    top: 0%;
+    right: 10%;
+    transition: all 0.3s ease-in-out;
+  }
+  .presentation-accueil {
+    padding: 8% 10%;
+  }
+  .accueil-portfolio-projets {
+    margin: 15px 10%;
+  }
+  .accueil-portfolio-projets-image {
+    height: auto;
+  }
+  .accueil-portfolio-projets-image:hover {
+    height: auto;
+    width: 110%;
+  }
+}
+@media (max-width: 760px) {
+  .banniere-accueil-textes {
+    top: 15%;
+    right: 15%;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+  }
+  .banniere-accueil-textes h3 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .banniere-accueil-textes h1 {
+    font-size: 15px;
+  }
+  .presentation-accueil {
+    padding: 8% 10%;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .presentation-accueil-image {
+    display: none;
+  }
+  .presentation-accueil-texte {
+    width: auto;
+    padding: 0;
+  }
+  .accueil-portfolio {
+    background-size: cover;
+    padding-bottom: 10%;
+  }
+  .accueil-portfolio-projets {
+    flex-direction: column;
+  }
+  .accueil-portfolio-projets > div {
+    margin-top: 40px;
+  }
+  .accueil-portfolio-projets-image {
+    height: 50vw;
+  }
+  .accueil-portfolio-projets-image:hover {
+    height: 25vw;
+    width: 110%;
+    transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+  }
+  .accueil-portfolio-lien {
+    justify-content: center;
+    margin: 0 5% 0% 5%;
+  }
+}
+.banniere-recommandations {
+  background-color: var(--peach);
+  height: 80px;
+  margin-bottom: 15px;
+}
+.banniere-recommandations p {
+  font-family: "Platypi", serif;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  margin: 0;
+}
+
+.recommandations {
+  margin-bottom: 100px;
+}
+@media (max-width: 760px) {
+  .recommandations {
+    margin-bottom: 50px;
+  }
+}
+.recommandations h2 {
+  text-align: center;
+  color: var(--red2);
+  margin-top: 100px;
+}
+.recommandations .auteur-citation {
+  color: var(--red2);
+  font-style: italic;
+  font-size: 12px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 50px;
+  overflow: initial !important;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--red2);
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.bloc-expertise {
+  background-color: var(--beige2);
+  padding: 50px 15% 60px 15%;
+}
+.bloc-expertise h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.bloc-expertise .liste-expertise {
+  display: flex;
+}
+.bloc-expertise .liste-expertise .service-unique {
+  display: flex;
+  padding: 20px 30px;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.bloc-expertise .liste-expertise .service-unique h4 {
+  font-size: 20px;
+}
+.bloc-expertise .liste-expertise .service-unique p {
+  display: none;
+}
+.bloc-expertise .liste-expertise .service-unique img {
+  width: 50px;
+  transition: width 0.2s ease-in-out;
+}
+.bloc-expertise .liste-expertise .service-unique:hover p {
+  display: block;
+}
+.bloc-expertise .liste-expertise .service-unique:hover h4 {
+  font-size: 25px;
+  transition: font-size 0.2s ease-in-out;
+}
+.bloc-expertise .liste-expertise .service-unique:hover img {
+  width: 60px;
+  transition: width 0.2s ease-in-out;
+}
+.bloc-expertise-plus {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.bloc-expertise-plus .bouton {
+  border-bottom: 2px solid var(--red2);
+}
+.bloc-expertise-plus .bouton span {
+  color: var(--brown-dark);
+  transition: 0.3s ease-in-out;
+}
+.bloc-expertise-plus .bouton i {
+  color: var(--red2);
+}
+.bloc-expertise-plus .bouton:hover i, .bloc-expertise-plus .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 760px) {
+  .liste-expertise {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.contact-formulaire h2 {
+  color: var(--orange) !important;
+  margin-bottom: 30px;
+}
+.contact-formulaire input, .contact-formulaire textarea {
+  border: none; /* Enlève toutes les bordures */
+  outline: none; /* Enlève le contour lors du focus */
+  padding: 10px;
+  border-radius: 5px;
+  width: 35vw;
+}
+.contact-formulaire .texte-formulaire {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  color: var(--brown-regular);
+  background-color: var(--beige2);
+  text-align: center;
+}
+.contact-formulaire .envoi-formulaire {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--orange);
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.contact-formulaire p {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-plus h2 {
+  color: var(--red1) !important;
+  margin-bottom: 30px;
+}
+.contact-plus p {
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif !important;
+  color: var(--brown-dark) !important;
+  margin-bottom: 30px;
+}
+
+.presentation-a-propos p {
+  color: white;
+}
+
+.bloc-inspirations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.bloc-inspirations > div:first-child {
+  background-color: var(--peach);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bloc-inspirations > div:first-child h2 {
+  color: white;
+}
+.bloc-inspirations > div {
+  width: 100%;
+  height: 30vw;
+}
+.bloc-inspirations .inspirations {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bloc-inspirations .inspirations h3 {
+  display: none;
+  color: var(--brown-dark);
+  z-index: 3;
+}
+.bloc-inspirations .inspirations-description {
+  z-index: 800;
+}
+.bloc-inspirations .inspirations-description p {
+  display: none;
+  color: var(--brown-dark);
+  padding: 0 10%;
+  text-align: center;
+}
+.bloc-inspirations .inspirations img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  opacity: 100%;
+  position: absolute;
+  z-index: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.bloc-inspirations .inspirations:hover img {
+  opacity: 20%;
+  transition: opacity 0.2s ease-in-out;
+}
+.bloc-inspirations .inspirations:hover h3, .bloc-inspirations .inspirations:hover p {
+  display: block;
+}
+
+.contact {
+  padding: 100px;
+  text-align: center;
+  margin-top: 50px;
+}
+.contact a {
+  margin-top: 0;
+}
+.contact h3 {
+  text-align: center;
+  padding: 0;
+  font-size: 40px;
+  color: var(--red2);
+  margin-top: 0;
+}
+.contact .bouton span {
+  color: var(--brown-regular);
+  transition: 0.2s ease-in-out;
+}
+.contact .bouton:hover i, .contact .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 760px) {
+  .bloc-inspirations > div:first-child {
+    grid-column: 1/3;
+    grid-row: 1;
+    height: auto;
+  }
+  .bloc-inspirations > div:last-child {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    height: auto;
+  }
+  .bloc-inspirations > div {
+    height: 40vw;
+  }
+  .bloc-inspirations .inspirations {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bloc-inspirations .inspirations h3 {
+    display: none;
+    color: var(--brown-dark);
+    z-index: 3;
+  }
+  .bloc-inspirations .inspirations-description {
+    z-index: 800;
+  }
+  .bloc-inspirations .inspirations-description p {
+    display: none;
+    color: var(--brown-dark);
+    padding: 0 10%;
+    text-align: center;
+  }
+  .bloc-inspirations .inspirations img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    opacity: 100%;
+    position: absolute;
+    z-index: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .bloc-inspirations .inspirations:hover img {
+    opacity: 20%;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .bloc-inspirations .inspirations:hover h3, .bloc-inspirations .inspirations:hover p {
+    display: block;
+  }
+}
+.contact-expertise {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-expertise h3 {
+  font-size: 30px;
+}
+.contact-expertise-plus {
+  padding: 100px;
+  text-align: center;
+  margin-top: 50px;
+}
+.contact-expertise-plus > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-expertise-plus a {
+  margin-top: 0;
+  color: var(--brown-dark);
+  margin-top: 10px;
+}
+.contact-expertise-plus h3 {
+  text-align: center;
+  padding: 0;
+  color: var(--orange);
+  margin-top: 0;
+}
+.contact-expertise-plus .bouton {
+  border-bottom: 2px solid var(--orange);
+}
+.contact-expertise-plus .bouton span {
+  color: var(--brown-regular);
+  transition: 0.2s ease-in-out;
+}
+.contact-expertise-plus .bouton:before {
+  background-color: var(--orange);
+}
+.contact-expertise-plus .bouton i {
+  color: var(--orange);
+}
+.contact-expertise-plus .bouton:hover i, .contact-expertise-plus .bouton:hover span {
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
 .project {
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
+  background-image: url("../assets/images/banniere-pattern-clair-2.webp");
   background-size: auto;
   padding-bottom: 50px;
 }
@@ -450,568 +1217,54 @@ img {
   color: var(--red2);
 }
 
-.catalogue-projet {
-  display: flex;
-  justify-content: space-between;
-}
-.catalogue-projet .projet-image {
-  height: 25vw;
-  width: 48%;
-  position: relative;
-  margin-bottom: 4%;
-}
-.catalogue-projet img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-}
-
-.photo-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--peach);
-  display: flex;
-  padding: 15px;
-  box-sizing: border-box;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-.photo-hover .hover-link {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.photo-hover .hover-link .link {
-  width: 1.5vw;
-  height: auto;
-  min-width: 10px;
-}
-.photo-hover .hover-text {
-  color: white;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-}
-.photo-hover .hover-text h4, .photo-hover .hover-text p {
-  text-transform: uppercase;
-}
-.photo-hover .hover-text h4 {
-  font-size: 20px;
-  color: white;
-}
-.photo-hover .hover-text p {
-  color: white;
-  text-align: center;
-}
-.photo-hover .hover-text .hover-category {
-  font-family: "space_mono", sans-serif;
-}
-.photo-hover i {
-  color: white;
-  font-size: 20px;
-}
-
-.photo-hover:hover {
-  opacity: 1;
-}
-
-.titre-principal {
-  font-size: 30px;
-  color: var(--peach);
-  margin: 110px 0 20px 0;
-  text-align: center;
-}
-
-.filtre-expertise {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 5%;
-  align-items: center;
-}
-.filtre-expertise p {
-  color: var(--brown-dark);
-  background-color: #EFE1D5;
-  padding: 3px 15px;
-  transition: background-color 0.3s ease-in-out;
-  text-align: center;
-}
-.filtre-expertise p:hover {
-  cursor: pointer;
-  background-color: var(--beige);
-  transition: background-color 0.3s ease-in-out;
-}
-.filtre-expertise .selected p {
-  background-color: var(--red1);
-  color: white;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4%;
-}
-.portfolio .projet {
-  margin-bottom: 4%;
-}
-
-.portfolio-taxonomie h1 {
-  margin-bottom: 7%;
-  line-height: 2;
-}
-.portfolio-taxonomie h1 strong {
-  color: white;
-  background-color: var(--red2);
-  padding: 5px 15px;
-  text-transform: uppercase;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-}
-.portfolio-taxonomie .contact {
-  padding: 50px 20%;
-  margin-top: 50px;
-}
-
-.banniere-accueil-image {
-  width: 100%;
-  height: 50vh;
-}
-.banniere-accueil-image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.banniere-accueil-textes {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-}
-.banniere-accueil-textes h3 {
-  font-size: 50px;
-  margin-top: 150px;
-  margin-bottom: 0;
-  background-color: white;
-  color: var(--red2);
-  padding: 10px 30px;
-  margin-bottom: 10px;
-}
-.banniere-accueil-textes h1 {
-  font-family: "Work Sans", sans-serif;
-  font-size: 20px;
-  margin-top: 0;
-  background-color: white;
-  color: var(--brown_regular);
-  padding: 10px 30px 10px 30px;
-}
-
-.presentation-accueil {
-  background-color: var(--peach);
-  display: flex;
-  padding: 8% 15%;
-  justify-content: space-between;
-  align-items: center;
-}
-.presentation-accueil-image {
-  width: 15vw;
-  height: 20vw;
-}
-.presentation-accueil-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  border-radius: 0 80% 80% 0;
-}
-.presentation-accueil-texte {
-  color: white;
-  width: 70%;
-  padding-left: 5%;
-  padding-bottom: 5%;
-}
-.presentation-accueil-texte h2, .presentation-accueil-texte p, .presentation-accueil-texte a {
-  color: white;
-}
-.presentation-accueil-texte p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.accueil-portfolio {
-  background-image: url("http://localhost/claire/wp-content/uploads/2024/05/banniere-pattern-clair-2.webp");
-  background-size: contain;
-}
-.accueil-portfolio h2 {
-  padding-top: 80px;
-  margin-top: 0;
-  text-align: center;
-  color: var(--red2);
-}
-.accueil-portfolio-projets {
-  display: flex;
-  margin: 15px 15%;
-  justify-content: center;
-}
-.accueil-portfolio-projets > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 100px;
-  z-index: 800;
-}
-.accueil-portfolio-projets > div h3 {
-  font-size: 15px;
-  margin-bottom: 0;
-}
-.accueil-portfolio-projets > div p {
-  font-size: 11px;
-  margin-top: 5px;
-  color: var(--peach);
-}
-.accueil-portfolio-projets > div:last-child, .accueil-portfolio-projets > div:first-child {
-  margin-top: 40px;
-  z-index: 1;
-}
-.accueil-portfolio-projets > div:hover {
-  z-index: 850;
-}
-.accueil-portfolio-projets-image {
-  height: 20vw;
-  width: 100%;
-  transition: height 0.2s ease-in-out, width 0.2s ease-in-out;
-}
-.accueil-portfolio-projets-image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.accueil-portfolio-projets-image:hover {
-  height: 25vw;
-  width: 110%;
-  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-.accueil-portfolio-lien {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 15% 0% 5%;
-  padding-bottom: 5%;
-}
-.accueil-portfolio-lien .bouton {
-  border-bottom: 2px solid var(--red2);
-}
-.accueil-portfolio-lien .bouton span {
-  color: var(--orange);
-  transition: 0.3s ease-in-out;
-}
-.accueil-portfolio-lien .bouton i {
-  color: var(--red2);
-}
-.accueil-portfolio-lien .bouton:hover i, .accueil-portfolio-lien .bouton:hover span {
-  color: white;
-  transition: 0.2s ease-in-out;
-}
-
-.banniere-recommandations {
-  background-color: var(--peach);
-  height: 80px;
-  margin-bottom: 15px;
-}
-.banniere-recommandations p {
-  font-family: "Platypi", serif;
-  color: white;
-  text-align: center;
-  font-size: 80px;
-  margin: 0;
-}
-
-.recommandations {
-  margin-bottom: 100px;
-}
-.recommandations h2 {
-  text-align: center;
-  color: var(--red2);
-  margin-top: 100px;
-}
-.recommandations .auteur-citation {
-  color: var(--red2);
-  font-style: italic;
-  font-size: 12px;
-}
-
-.swiper {
-  width: 100%;
-  padding-top: 0;
-  padding-bottom: 50px;
-  overflow: initial !important;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  background-color: white;
-  width: 80%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.swiper-pagination-bullet-active {
-  background: var(--red2);
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.bloc-expertise {
-  background-color: var(--beige2);
-  padding: 50px 15% 60px 15%;
-}
-.bloc-expertise h2 {
-  text-align: center;
-  padding-bottom: 50px;
-}
-.bloc-expertise .liste-expertise {
-  display: flex;
-}
-.bloc-expertise .liste-expertise .service-unique {
-  display: flex;
-  padding: 20px 30px;
-  width: 25%;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.bloc-expertise .liste-expertise .service-unique h4 {
-  font-size: 20px;
-}
-.bloc-expertise .liste-expertise .service-unique p {
-  display: none;
-}
-.bloc-expertise .liste-expertise .service-unique img {
-  width: 50px;
-  transition: width 0.2s ease-in-out;
-}
-.bloc-expertise .liste-expertise .service-unique:hover p {
-  display: block;
-}
-.bloc-expertise .liste-expertise .service-unique:hover h4 {
-  font-size: 25px;
-  transition: font-size 0.2s ease-in-out;
-}
-.bloc-expertise .liste-expertise .service-unique:hover img {
-  width: 60px;
-  transition: width 0.2s ease-in-out;
-}
-.bloc-expertise-plus {
-  display: flex;
-  justify-content: center;
-  margin-top: 3%;
-}
-.bloc-expertise-plus .bouton {
-  border-bottom: 2px solid var(--red2);
-}
-.bloc-expertise-plus .bouton span {
-  color: var(--brown-dark);
-  transition: 0.3s ease-in-out;
-}
-.bloc-expertise-plus .bouton i {
-  color: var(--red2);
-}
-.bloc-expertise-plus .bouton:hover i, .bloc-expertise-plus .bouton:hover span {
-  color: white;
-  transition: 0.2s ease-in-out;
-}
-
-.contact-formulaire h2 {
-  color: var(--orange) !important;
-  margin-bottom: 30px;
-}
-.contact-formulaire input, .contact-formulaire textarea {
-  border: none; /* Enlève toutes les bordures */
-  outline: none; /* Enlève le contour lors du focus */
-  padding: 10px;
-  border-radius: 5px;
-  width: 35vw;
-}
-.contact-formulaire .texte-formulaire {
-  font-size: 14px;
-  font-family: "Work Sans", sans-serif;
-  color: var(--brown-regular);
-  background-color: var(--beige2);
-  text-align: center;
-}
-.contact-formulaire .envoi-formulaire {
-  font-family: "Work Sans", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--orange);
-  background: none;
-  font-weight: 700;
-  cursor: pointer;
-}
-.contact-formulaire p {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.contact-plus h2 {
-  color: var(--red1) !important;
-  margin-bottom: 30px;
-}
-.contact-plus p {
-  font-size: 14px;
-  font-family: "Work Sans", sans-serif !important;
-  color: var(--brown-dark) !important;
-  margin-bottom: 30px;
-}
-
-.bloc-inspirations {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.bloc-inspirations > div:first-child {
-  background-color: var(--peach);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.bloc-inspirations > div:first-child h2 {
-  color: white;
-}
-.bloc-inspirations > div {
-  width: 100%;
-  height: 30vw;
-}
-.bloc-inspirations .inspirations {
-  position: relative;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.bloc-inspirations .inspirations h3 {
-  display: none;
-  color: var(--brown-dark);
-  z-index: 3;
-}
-.bloc-inspirations .inspirations-description {
-  z-index: 800;
-}
-.bloc-inspirations .inspirations-description p {
-  display: none;
-  color: var(--brown-dark);
-  padding: 0 10%;
-  text-align: center;
-}
-.bloc-inspirations .inspirations img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  opacity: 100%;
-  position: absolute;
-  z-index: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.bloc-inspirations .inspirations:hover img {
-  opacity: 20%;
-  transition: opacity 0.2s ease-in-out;
-}
-.bloc-inspirations .inspirations:hover h3, .bloc-inspirations .inspirations:hover p {
-  display: block;
-}
-
-.contact {
-  padding: 100px;
-  text-align: center;
-  margin-top: 50px;
-}
-.contact a {
-  margin-top: 0;
-}
-.contact h3 {
-  text-align: center;
-  padding: 0;
-  font-size: 40px;
-  color: var(--red2);
-  margin-top: 0;
-}
-.contact .bouton span {
-  color: var(--brown-regular);
-  transition: 0.2s ease-in-out;
-}
-.contact .bouton:hover i, .contact .bouton:hover span {
-  color: white;
-  transition: 0.2s ease-in-out;
-}
-
-.contact-expertise {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-}
-.contact-expertise h3 {
-  font-size: 30px;
-}
-.contact-expertise-plus {
-  padding: 100px;
-  text-align: center;
-  margin-top: 50px;
-}
-.contact-expertise-plus > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contact-expertise-plus a {
-  margin-top: 0;
-  color: var(--brown-dark);
-  margin-top: 10px;
-}
-.contact-expertise-plus h3 {
-  text-align: center;
-  padding: 0;
-  color: var(--orange);
-  margin-top: 0;
-}
-.contact-expertise-plus .bouton {
-  border-bottom: 2px solid var(--orange);
-}
-.contact-expertise-plus .bouton span {
-  color: var(--brown-regular);
-  transition: 0.2s ease-in-out;
-}
-.contact-expertise-plus .bouton:before {
-  background-color: var(--orange);
-}
-.contact-expertise-plus .bouton i {
-  color: var(--orange);
-}
-.contact-expertise-plus .bouton:hover i, .contact-expertise-plus .bouton:hover span {
-  color: white;
-  transition: 0.2s ease-in-out;
+@media (max-width: 760px) {
+  .project-presentation {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .project-presentation h1 {
+    margin: 5% 0 10% 0;
+  }
+  .project-presentation > div {
+    width: 100%;
+    text-align: center;
+  }
+  .project-presentation .logo_project img {
+    max-width: 100px;
+    margin-top: 10%;
+  }
+  .project-missions {
+    flex-direction: column-reverse;
+  }
+  .project-missions > div {
+    width: 100%;
+  }
+  .project-missions .project-missions-text {
+    padding-left: 0px;
+  }
+  .project-missions .project-missions-text h2 {
+    text-align: center;
+    padding-top: 10%;
+    margin: 0;
+    font-size: 25px;
+  }
+  .contact-projet {
+    padding: 10%;
+  }
+  .contact-projet h3 {
+    font-size: 30px;
+  }
+  .contact-projet p {
+    margin: 0;
+  }
+  .projet-autres {
+    margin-bottom: 10%;
+  }
+  .projet-autres h3 {
+    font-size: 30px;
+  }
+  .projet-autres .catalogue-projet {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
