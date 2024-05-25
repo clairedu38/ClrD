@@ -15,7 +15,8 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 function theme_enqueue_scripts() {
-    wp_enqueue_script( 'menu-script', get_stylesheet_directory_uri() . '/js/header.js', array(), null, true );
+    wp_enqueue_script( 'simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.3.0/dist/simpleParallax.min.js', array(), '5.3.0', true);
+    wp_enqueue_script( 'header-script', get_stylesheet_directory_uri() . '/js/header.js', array(), null, true );
     wp_enqueue_script( 'reco-script', get_stylesheet_directory_uri() . '/js/recommandations.js', array(), null, true );
     wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/06b62cd2a4.js', array(), null, true );
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);

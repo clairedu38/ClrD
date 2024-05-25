@@ -16,24 +16,24 @@ get_header();?>
 
 <div class="contact-expertise">
     <div class="contact">
-        <h3>Mon profil vous interresse ?</h3>
+        <h3 class="btn-titre"><?php the_field('page_a_propos_bouton_titre','106'); ?></h3>
         <div> 
             <a class="bouton" href="<?php echo home_url('/contact'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>N'hésitez pas à me contacter</span>
+                <span><?php the_field('page_a_propos_bouton','106'); ?></span>
             </a>
         </div>
     </div> 
     <div class="contact-expertise-plus">
-        <h3>Vous voulez en savoir plus ?</h3>
+        <h3 class="btn-titre"><?php the_field('page_a_propos_bouton','106'); ?></h3>
         <div> 
             <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Découvrir mon portfolio</span>
+                <span><?php the_field('page_expertise_bouton_1','106'); ?></span>
             </a>
             <a class="bouton" href="<?php echo home_url('/a-propos'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>Qui se cache derrière ClrD ?</span>
+                <span><?php the_field('page_expertise_bouton_2','106'); ?></span>
             </a>
                 
         </div>

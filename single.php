@@ -44,7 +44,7 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
                 <div> 
                     <a class="bouton lien-site-projet" target="_blank" href="<?php the_field('lien_du_site'); ?>">
                         <i class="fa-solid fa-arrow-right"></i>
-                        <span>Lien vers le site</span>
+                        <span><?php the_field('page_projet_lien_site','106'); ?></span>
                     </a>
                 </div>
                 <?php endif; ?>
@@ -63,18 +63,18 @@ $expertises = wp_get_post_terms($post_id, 'expertise');
     </section>
 
     <div class="contact-projet">
-        <h3>Ce projet vous parle ?</h3>
+        <h3><?php the_field('page_projet_bouton_titre','106'); ?></h3>
         <div> 
             <a class="bouton" target="_blank" href="<?php echo home_url('/contact'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>N'hésitez pas à me contacter</span>
+                <span><?php the_field('page_projet_bouton','106'); ?></span>
             </a>
         </div>
     </div> 
         
     <section>
         <div class="projet-autres">
-            <h3>Envie d'en voir plus ?</h3>
+            <h3 class="btn-titre"><?php the_field('page_projet_plus','106'); ?></h3>
 
             <div class="catalogue-projet">
             <?php

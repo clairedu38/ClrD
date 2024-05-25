@@ -41,6 +41,7 @@ function changeFilter(option) {
         }
     }
     load_ajax();
+    console.log(expertiseChoice);
 }
 
 // Fonction pour charger les données via AJAX

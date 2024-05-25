@@ -1,6 +1,7 @@
 .bloc-expertise {
     background-color: var(--beige2);
     padding: 50px 15% 60px 15%;
+    height: 60vh;
 
 
     h2 {
@@ -19,10 +20,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-
-            h4 {
-                font-size: 20px;
-            }
 
             p {
                 display: none;
@@ -78,11 +75,23 @@
     }
 }
 
+@media (max-width: $breakpoint__tab) {
+    .bloc-expertise {
+        padding: 4% 10% 60px 10%;
+        height: 37vh;
+
+        h2 { padding-bottom: 20px; }
+    }
+
+    
+}
+
 @media (max-width: $breakpoint__large_phone) {
     .liste-expertise {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .bloc-expertise {height: 70vh;}
 }
     

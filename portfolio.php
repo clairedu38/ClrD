@@ -7,7 +7,7 @@ get_header();?>
 <section>
 
     <div>
-        <h1 class="titre-principal">Découvrez tous mes projets en web et design</h1>
+        <h1 class="titre-principal"><?php the_field('page_portfolio_titre','106'); ?></h1>
     </div>
 
     <div class="filtre-expertise">

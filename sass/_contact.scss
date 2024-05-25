@@ -11,6 +11,10 @@
         padding: 10px;
         border-radius: 5px;
         width: 35vw;
+
+        @media (max-width: $breakpoint__large_phone) {
+            width: 70vw;
+        }
     }
 
     .texte-formulaire {

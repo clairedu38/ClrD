@@ -10,7 +10,7 @@ $photoBanniereAccueil = get_field('banniere_accueil');
 
 <div class="banniere-accueil">
     <div class="banniere-accueil-image">
-        <img src="<?php echo esc_url($photoBanniereAccueil['url']); ?>" alt="<?php echo esc_attr($photoBanniereAccueil['alt']); ?>">
+        <img class="parallax" src="<?php echo esc_url($photoBanniereAccueil['url']); ?>" alt="<?php echo esc_attr($photoBanniereAccueil['alt']); ?>">
     </div>
     <div class="banniere-accueil-textes">
         <h3><?php echo esc_html($titreBanniere); ?></h3>
@@ -37,7 +37,7 @@ $photoBanniereAccueil = get_field('banniere_accueil');
 
 <div class="accueil-portfolio">
     <div>
-        <h2>Mes réalisations</h2>
+        <h2><?php the_field('titre_apercu_portfolio'); ?></h2>
     </div>
     <div class="accueil-portfolio-projets">
     <?php
@@ -85,7 +85,7 @@ $photoBanniereAccueil = get_field('banniere_accueil');
     <div class="accueil-portfolio-lien">
         <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
             <i class="fa-solid fa-arrow-right"></i>
-            <span>Découvrir l'ensemble de mon portfolio</span>
+            <span><?php the_field('titre_portfolio_plus'); ?></span>
         </a>
     </div>
 

@@ -1,10 +1,14 @@
+<?php 
+$titreReco = get_field('bloc-recommandations-titre','106'); 
+$imageBanniereReco = get_field('bloc_recommandation_banniere','106'); ?>
+
 <div class="banniere-recommandations">
-    <p>“ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “ “</p>
+    <img src="<?php echo esc_url($imageBanniereReco['url']); ?>" alt="<?php echo esc_attr($imageBanniereReco['alt']); ?>">
 </div>
 
 <section class="recommandations">
 <div>
-    <h2>Ils me recommandent</h2>
+    <h2><?php the_field('bloc-recommandations-titre','106'); ?></h2>
 </div>
 
 <?php

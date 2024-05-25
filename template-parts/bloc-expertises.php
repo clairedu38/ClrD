@@ -1,6 +1,6 @@
 <div class="bloc-expertise">
 
-    <h2> Mes expertises</h2>
+    <h2><?php the_field('titre_bloc_expertises','106'); ?></h2>
 
     <div class="liste-expertise">
     <?php
@@ -22,8 +22,8 @@
                 ?>
                 <div class="service-unique">
                     <img src="<?php echo esc_url($iconServices['url']); ?>" alt="">
-                    <h4>
-                    <?php echo get_the_title() ?></h4>
+                    <h3>
+                    <?php echo get_the_title() ?></h3>
                     <p><?php the_field('courte_description'); ?>
                     </p>  
                 </div>
@@ -36,7 +36,7 @@
     <div class="bloc-expertise-plus">
     <a class="bouton" href="<?php echo home_url('/expertises'); ?>">
                 <i class="fa-solid fa-arrow-right"></i>
-                <span>En savoir plus</span>
+                <span><?php the_field('bloc_expertise_bouton','106'); ?></span>
             </a>
     </div>
 

@@ -4,7 +4,7 @@ get_header();?>
 <section class="portfolio-taxonomie">
 
     <div>
-        <h1 class="titre-principal">Découvrez tous mes projets</br><strong><?php single_term_title(); ?></strong></h1>
+        <h1 class="titre-principal"><?php the_field('page_portfolio_expertise_titre','106'); ?></br><strong><?php single_term_title(); ?></strong></h1>
     </div>
 
     <div class="catalogue-projet portfolio">
@@ -45,11 +45,11 @@ get_header();?>
     </div>
 
     <div class="contact">
-    <h3>Vous souhaitez découvrir plus de projets ?</h3>
+    <h3><?php the_field('page_portfolio_expertise_bouton_titre','106'); ?></h3>
     <div> 
         <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
             <i class="fa-solid fa-arrow-right"></i>
-            <span>Voir tous les projets</span>
+            <span><?php the_field('page_portfolio_expertise_bouton_titre_plus','106'); ?></span>
         </a>
     </div>
 </div> 

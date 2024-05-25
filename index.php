@@ -1,6 +1,3 @@
-<?php
-// Template Name: Accueil
-?>
 <?php 
 get_header();
 $photoClaire = get_field('photo_claire');

@@ -1,5 +1,5 @@
 :root {
-    --peach: #E17C69;
+    --peach: #e17c69;
     --red1: #AE312D;
     --red2: #B7524D;
     --orange: #E19754;
@@ -11,8 +11,8 @@
 
 // BREAKPOINT MEDIA QUERY
 
-$breakpoint__large_phone: 760px;
-$breakpoint__tab: 1115px;
+$breakpoint__large_phone: 767px;
+$breakpoint__tab: 1024px;
 
 * {
     font-family: 'Platypi', serif;
@@ -40,12 +40,12 @@ section {
 
 
 h1 {
-    font-size: 50px;
-    margin: 65px 0;
+    font-size: 45px;
+    margin: 20px 0;
 }
 
 h2 {
-    font-size: calc(2vw + 10px); 
+    font-size: 45px; 
     font-weight: normal;
 }
 
@@ -61,6 +61,10 @@ h4 {
 p {
     font-size: 14px ;
     font-family: "Work Sans", sans-serif;
+}
+
+.btn-titre {
+    font-size: 40px;
 }
 
 .btn-submit {
@@ -167,4 +171,43 @@ i:hover, .arrow:hover {
     section {
         padding: 0 10%;
     }
+    
+    h1, h2 {
+        font-size: 35px; 
+    }
+    
+    h3 {
+        font-size: 15px ;
+    }
+    
+    h4 {
+        font-size: 12px ;
+    }
+
+    .btn-titre {
+        font-size: 30px;
+    }
+
   }
+
+@media (max-width: $breakpoint__large_phone) {
+    
+    
+    h1 , h2 {
+        font-size:30px;
+    }
+
+    h3 {
+        font-size: 13px ;
+    }
+
+    p {
+        font-size: 12px ;
+    }
+
+    .btn-titre {
+        font-size: 25px;
+    }
+}
+
+
