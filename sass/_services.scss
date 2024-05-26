@@ -3,7 +3,6 @@
     padding: 50px 15% 60px 15%;
     height: 60vh;
 
-
     h2 {
         text-align: center;
         padding-bottom: 50px;
@@ -76,6 +75,7 @@
 }
 
 @media (max-width: $breakpoint__tab) {
+
     .bloc-expertise {
         padding: 4% 10% 60px 10%;
         height: 37vh;
@@ -87,11 +87,13 @@
 }
 
 @media (max-width: $breakpoint__large_phone) {
+
     .liste-expertise {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    
     .bloc-expertise {height: 70vh;}
 }
     

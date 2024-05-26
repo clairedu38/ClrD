@@ -16,7 +16,9 @@
         </div>
         <div class="logo-footer">
             <div>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ClrD.svg" alt="Logo ClrD"></a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ClrD.svg" alt="Logo ClrD">
+            </a>
             </div>
             <div>
             <p>WEB & DESIGN</p> 
@@ -25,9 +27,15 @@
         <div class="footer-contact">
             <h3>Créons quelque<br>chose ensemble.</h3>
             <div>
-            <a href="<?php echo home_url('/contact'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-contact.svg" alt="icon pour aller vers la page contact"></a>
-            <a href="<?php echo esc_html($cv); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-cv.svg" alt="icon pour télécharger le cv"></a>
-            <a href="<?php echo esc_html($linkedin); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg" alt="icon pour aller voir le profil linkedin"></a>
+            <a href="<?php echo home_url('/contact'); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-contact.svg" alt="icon pour aller vers la page contact">
+            </a>
+            <a href="<?php echo esc_html($cv); ?>" target="_blank">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-cv.svg" alt="icon pour télécharger le cv">
+            </a>
+            <a href="<?php echo esc_html($linkedin); ?>" target="_blank">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg" alt="icon pour aller voir le profil linkedin">
+            </a>
             </div>
         </div>
     </div>

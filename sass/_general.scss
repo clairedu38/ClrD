@@ -63,28 +63,6 @@ p {
     font-family: "Work Sans", sans-serif;
 }
 
-.btn-titre {
-    font-size: 40px;
-}
-
-.btn-submit {
-    border-radius: 2px;
-    background-color: var(--medium-grey);
-    color: black;
-    height: 50px;
-    font-size: 12px;
-    font-family: 'space_mono', sans-serif;
-    font-weight: normal;
-    transition: background-color 0.6s, color 0.6s, font-weight 0.6s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-    }
-}
-
 .content {
     margin-top: 80px;
 }
@@ -94,7 +72,6 @@ img {
 }
 
 
-  
 
 // MISE EN FORME BOUTONS
 
@@ -102,6 +79,10 @@ a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+}
+
+.btn-titre {
+    font-size: 40px;
 }
 
 .bouton {
@@ -150,7 +131,7 @@ a {
 
   // ANIMATION FLECHE BOUTON
 
-  @keyframes bounce {
+@keyframes bounce {
 	0%, 100%, 50%, 80% {
 		transform: translateX(0)
 	}
@@ -165,6 +146,9 @@ a {
 i:hover, .arrow:hover {
     animation: bounce 0.5s ease-in-out;
 }
+
+
+// MEDIA QUERIES 
 
 @media (max-width: $breakpoint__tab) {
     
@@ -191,7 +175,6 @@ i:hover, .arrow:hover {
   }
 
 @media (max-width: $breakpoint__large_phone) {
-    
     
     h1 , h2 {
         font-size:30px;

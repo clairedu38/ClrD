@@ -5,7 +5,6 @@
 }
 
 .texte-banniere h2 {
-
     font-family: 'Platypi', serif !important;
     font-weight: 300!important;
 }
@@ -122,12 +121,18 @@
 }
 
 @media (max-width: $breakpoint__tab) {
+
     .bloc-inspirations {
+
         >div:first-child {
+
             h2 {font-size: 30px;}
         }
+
         .inspirations {
+
             &:hover {
+
                 h3 {
                     text-align: center;
                     font-size: 15px;
@@ -156,10 +161,8 @@
         }
     }
 
-    .contact-expertise {
-        >div {
-            padding: 50px;
-        }
+    .contact-expertise >div {
+        padding: 50px;
     }
 }
 
@@ -171,7 +174,8 @@
             grid-column: 1 / 3;
             grid-row: 1;
             height: auto;
-                h2 {font-size: 30px;}
+            
+            h2 {font-size: 30px;}
         }
 
 
@@ -179,7 +183,6 @@
             grid-column: 1 / 2;
             grid-row: 2 / 4;
             height: auto;
-
         }
     
         >div {
@@ -204,7 +207,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-
 
     &-plus {
         padding: 100px ;

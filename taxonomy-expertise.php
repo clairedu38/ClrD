@@ -15,7 +15,7 @@ get_header();?>
     $term = get_queried_object();
     $term_slug = $term->slug;
 
-    // Arguments de la requête
+    // Récupération des projets de l'expertise actuelle via WP_Query
     $args = array(
         'post_type' => 'projet',
         'post_status' => 'publish',
@@ -29,7 +29,6 @@ get_header();?>
         ),
     );
 
-    // création d' une nouvelle instance de WP_Query
     $query = new WP_Query($args);
 
     if ($query->have_posts()) {
@@ -39,13 +38,12 @@ get_header();?>
             <?php get_template_part('template-parts/projets-vignette'); ?>
             <?php
         }
-        wp_reset_postdata(); // réinitialisation de la requête
+        wp_reset_postdata();
     } ?>
-
     </div>
 
     <div class="contact">
-    <h3><?php the_field('page_portfolio_expertise_bouton_titre','106'); ?></h3>
+    <h3 class="btn-titre" ><?php the_field('page_portfolio_expertise_bouton_titre','106'); ?></h3>
     <div> 
         <a class="bouton" href="<?php echo home_url('/portfolio'); ?>">
             <i class="fa-solid fa-arrow-right"></i>

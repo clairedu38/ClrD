@@ -3,6 +3,8 @@
     <h2><?php the_field('titre_bloc_expertises','106'); ?></h2>
 
     <div class="liste-expertise">
+
+    <!-- Récupération des expertises via WP_Query -->
     <?php
         $args = array(
             'post_type' => 'service',
@@ -11,7 +13,6 @@
             'order' => 'ASC',
         );
 
-            // création d' une nouvelle instance de WP_Query
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {
@@ -21,7 +22,7 @@
                 $couleurService = get_field('couleur_service');
                 ?>
                 <div class="service-unique">
-                    <img src="<?php echo esc_url($iconServices['url']); ?>" alt="">
+                    <img src="<?php echo esc_url($iconServices['url']); ?>" alt="<?php echo esc_attr($iconServices['alt']); ?>">
                     <h3>
                     <?php echo get_the_title() ?></h3>
                     <p><?php the_field('courte_description'); ?>
@@ -29,7 +30,7 @@
                 </div>
                 <?php
             }
-            wp_reset_postdata(); // réinitialisation de la requête
+            wp_reset_postdata(); 
         }?>
     </div>
 

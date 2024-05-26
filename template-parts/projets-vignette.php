@@ -7,6 +7,8 @@ $expertises = get_the_terms(get_the_ID(), 'expertise');
 
     <img src="<?php echo esc_url($vignette['url']); ?>" alt="<?php echo esc_attr($vignette['alt']); ?>">
 
+    <!-- Div présente au hover sur l'image -->
+    
     <div class="photo-hover">
         <div class="hover-text">
             <h4 class="hover-title"><?php echo get_the_title() ?></h4>

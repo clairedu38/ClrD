@@ -24,14 +24,16 @@
                     wp_nav_menu(array(
                         'theme_location' => 'header',
                         'container'      => false,
-                        'menu_class'     => 'menuItem', // Utiliser la même classe que dans le CSS
+                        'menu_class'     => 'menuItem', 
                         ));
                     ?>
                 </div>
             </nav>  
         
             <div class="logo-header">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ClrD.svg" alt="Logo ClrD"></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-ClrD.svg" alt="Logo ClrD">
+                </a>
             </div>
                      
         </header>

@@ -22,7 +22,7 @@ header {
 
     @media (max-width: $breakpoint__large_phone) {
       justify-content: flex-end;
-      right: 10%;
+      right: 50px;
       transition: all 0.3s ease-in-out;
     }
 
@@ -100,15 +100,15 @@ header {
 
 .menuItem {
   position: absolute;
-  width: 300px;
+  width: 150px;
   padding: 80px 50px 50px 50px;
   background: var(--red2);
   list-style-type: none;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  left: -300px; /* Déplacer le menu hors de la vue par défaut */
+  left: -150px; /* Déplacer le menu hors de la vue par défaut */
   top: 0;
-  height: 100vh; /* Occupera toute la hauteur de l'écran */
+  height: 100vh;
   margin: 0;
 
   li {
@@ -123,6 +123,7 @@ header {
   top: 0;
 
   .menuToggle {
+
     input {
       left: 50px;
       top: 28px;
@@ -137,7 +138,6 @@ header {
   .menuItem {
     left: 0;
     transform: translateX(-100%); /* Cacher le menu en dehors de l'écran */
-    overflow-y: auto; /* Ajouter une barre de défilement si le menu est trop grand */
   }
 
   .menuToggle input:checked ~ .menuItem {

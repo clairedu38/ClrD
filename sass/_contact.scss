@@ -6,7 +6,7 @@
     }
 
     input, textarea {
-        border: none; /* Enlève toutes les bordures */
+        border: none; 
         outline: none; /* Enlève le contour lors du focus */
         padding: 10px;
         border-radius: 5px;
@@ -43,6 +43,7 @@
 }
 
 .contact-plus {
+    
     h2 {
         color: var(--red1)!important;
         margin-bottom: 30px;

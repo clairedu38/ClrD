@@ -40,6 +40,8 @@ $photoBanniereAccueil = get_field('banniere_accueil');
         <h2><?php the_field('titre_apercu_portfolio'); ?></h2>
     </div>
     <div class="accueil-portfolio-projets">
+
+<!-- Récupération des projets "mis en avant" via WP_Query -->
     <?php
         $args = array(
             'post_type' => 'projet',
@@ -55,7 +57,6 @@ $photoBanniereAccueil = get_field('banniere_accueil');
             )
         );
 
-            // création d' une nouvelle instance de WP_Query
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {

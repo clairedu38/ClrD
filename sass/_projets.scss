@@ -48,7 +48,6 @@
     }
 
     .project-missions-text {
-
         padding-left: 50px;
         display: flex;
         flex-direction: column;
@@ -77,6 +76,7 @@
             }
         
             &:hover {
+
                 i, span {
                     color: white;
                     transition: 0.2s ease-in-out;
@@ -134,7 +134,6 @@ img {
 }
 
 .projet-autres {
-
     margin: 50px 0 100px 0;
 
     h3 {
@@ -176,7 +175,6 @@ img {
         }
     
         .project-missions-text {
-    
             padding-left: 0px;
 
             h2 {

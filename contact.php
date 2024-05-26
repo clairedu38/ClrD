@@ -4,6 +4,7 @@
 <?php
 get_header();?>
 
+<!-- Contenu sur WP -->
 <div>
     <?php
     if (have_posts()) :

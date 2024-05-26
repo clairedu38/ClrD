@@ -56,27 +56,6 @@ p {
   font-family: "Work Sans", sans-serif;
 }
 
-.btn-titre {
-  font-size: 40px;
-}
-
-.btn-submit {
-  border-radius: 2px;
-  background-color: var(--medium-grey);
-  color: black;
-  height: 50px;
-  font-size: 12px;
-  font-family: "space_mono", sans-serif;
-  font-weight: normal;
-  transition: background-color 0.6s, color 0.6s, font-weight 0.6s ease-in-out;
-}
-.btn-submit:hover {
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-
 .content {
   margin-top: 80px;
 }
@@ -89,6 +68,10 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.btn-titre {
+  font-size: 40px;
 }
 
 .bouton {
@@ -199,7 +182,7 @@ header .logo-header {
 @media (max-width: 767px) {
   header .logo-header {
     justify-content: flex-end;
-    right: 10%;
+    right: 50px;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -267,15 +250,15 @@ header .menuToggle input:checked ~ .menuItem {
 
 .menuItem {
   position: absolute;
-  width: 300px;
+  width: 150px;
   padding: 80px 50px 50px 50px;
   background: var(--red2);
   list-style-type: none;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  left: -300px; /* Déplacer le menu hors de la vue par défaut */
+  left: -150px; /* Déplacer le menu hors de la vue par défaut */
   top: 0;
-  height: 100vh; /* Occupera toute la hauteur de l'écran */
+  height: 100vh;
   margin: 0;
 }
 .menuItem li {
@@ -299,7 +282,6 @@ header .menuToggle input:checked ~ .menuItem {
 .menu--left .menuItem {
   left: 0;
   transform: translateX(-100%); /* Cacher le menu en dehors de l'écran */
-  overflow-y: auto; /* Ajouter une barre de défilement si le menu est trop grand */
 }
 .menu--left .menuToggle input:checked ~ .menuItem {
   transform: none; /* Afficher le menu lorsque le toggle est activé */
@@ -538,8 +520,7 @@ footer .second-footer p a {
 
 .portfolio-taxonomie h1 {
   margin-bottom: 7%;
-  text-align: left;
-  margin-left: 0;
+  text-align: center;
 }
 .portfolio-taxonomie h1 strong {
   color: white;
@@ -557,7 +538,7 @@ footer .second-footer p a {
 }
 .portfolio-taxonomie .contact {
   padding: 50px 20%;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .banniere-accueil-image {
@@ -695,15 +676,9 @@ footer .second-footer p a {
   margin: 0 15% 0% 5%;
   padding-bottom: 5%;
 }
-.accueil-portfolio-lien .bouton {
-  border-bottom: 2px solid var(--red2);
-}
 .accueil-portfolio-lien .bouton span {
   color: var(--orange);
   transition: 0.3s ease-in-out;
-}
-.accueil-portfolio-lien .bouton i {
-  color: var(--red2);
 }
 .accueil-portfolio-lien .bouton:hover i, .accueil-portfolio-lien .bouton:hover span {
   color: white;
@@ -925,7 +900,7 @@ footer .second-footer p a {
   margin-bottom: 30px;
 }
 .contact-formulaire input, .contact-formulaire textarea {
-  border: none; /* Enlève toutes les bordures */
+  border: none;
   outline: none; /* Enlève le contour lors du focus */
   padding: 10px;
   border-radius: 5px;

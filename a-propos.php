@@ -4,6 +4,7 @@
 <?php
 get_header();?>
 
+<!-- Contenu sur WP -->
 <div>
     <?php
     if (have_posts()) :
@@ -22,6 +23,8 @@ get_header();?>
     <div>
         <h2><?php the_field('page_a_propos_inspiration_titre','106'); ?></h2>
     </div>
+
+        <!-- Récupération des inspirations via WP_Query -->
     <?php
         $args = array(
             'post_type' => 'inspiration',
@@ -30,7 +33,6 @@ get_header();?>
             'order' => 'ASC',
         );
 
-            // création d' une nouvelle instance de WP_Query
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {
@@ -39,7 +41,7 @@ get_header();?>
                 $imageInspiration = get_field('image_inspiration');
                 ?>
                 <div class="inspirations">
-                    <img src="<?php echo esc_url($imageInspiration['url']); ?>" alt="">
+                    <img src="<?php echo esc_url($imageInspiration['url']); ?>" alt="<?php echo esc_attr($imageInspiration['alt']); ?>">
                     <h3><?php echo get_the_title() ?></h3>
                     <div class="inspirations-description">
                     <?php the_field('description_inspiration'); ?>

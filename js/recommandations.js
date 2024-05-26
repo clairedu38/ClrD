@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Création d'un swiper en carroussel
+
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
       grabCursor: true,

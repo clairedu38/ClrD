@@ -22,16 +22,13 @@ function changeColorFilter () {
 
     options.forEach(option => {
         option.addEventListener('click', function() {
-            // on retire la classe selected à toute les options
             options.forEach(opt => opt.classList.remove('selected'));
-            // on ajoute la classe selected à l'option cliquée
             this.classList.add('selected');
         });
     });
 }
 
 function changeFilter(option) {
-    // Mise à jour de la variable expertiseChoice
     if (option.classList.contains('all-option')) {
         expertiseChoice = "";
     } else if (option.classList.contains('choice')) {
@@ -44,7 +41,7 @@ function changeFilter(option) {
     console.log(expertiseChoice);
 }
 
-// Fonction pour charger les données via AJAX
+// Fonction pour charger les données sans recharger la page via AJAX
 function load_ajax() {
     let expertise = expertiseChoice;
 
