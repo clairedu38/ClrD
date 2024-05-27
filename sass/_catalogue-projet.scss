@@ -26,7 +26,8 @@
     left: 0; 
     width: 100%;
     height: 100%; 
-    background-color: var(--peach); 
+    background: linear-gradient(48deg, rgba(225,124,105,0.8) 0%, rgba(225,124,105,1) 30%, rgba(225,124,105,1) 70%, rgba(225,124,105,0.8) 100%);    // background-image: radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgba(225, 124, 105,1) 50%, rgba(225, 124, 105,0.8) 90% );
+    // background-image: linear-gradient( 109.6deg,  rgba(225, 124, 105,1) 50.5%, rgba(183, 82, 77,0.8) 100.2% );
     display: flex; 
     padding: 15px; 
     box-sizing: border-box;
@@ -37,15 +38,19 @@
     transition: opacity 0.6s ease-in-out;
 
     .hover-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    .hover-arrow {
         position: relative; 
         display: flex;
         justify-content: center;
-
-        .link {
-            width: 1.5vw;
-            height: auto;
-            min-width: 10px;
-        }
+        z-index: 11;
     }
 
     .hover-text {

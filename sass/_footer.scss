@@ -9,13 +9,18 @@ footer {
     .first-footer {
         background-color: var(--beige2);
         background-image: url("../assets/images/banniere-pattern-clair.webp");
-        background-size: contain;
+        background-size: 60%;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 4vh;
+
+        
+        @media (max-width: $breakpoint__tab) {
+            background-size: 100%;
+        }
 
         >div {
             width: 30vw;
@@ -92,6 +97,7 @@ footer {
         .first-footer {
            flex-direction: column-reverse;
            padding: 4vh 0 1vh 0;
+           background-size: 180%;
     
             >div {
                 width: 70vw;

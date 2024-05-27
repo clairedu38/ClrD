@@ -12,7 +12,7 @@ $titre = get_the_title();
 $couleur_projet = get_field('couleur_du_projet');
 $lien_existant = get_field('lien_existant');
 
-// Récupération de la catégorie + vérification de la présence d'un terme dans cette catégorie
+// Récupération des catégories "expertises"
 $expertises = wp_get_post_terms($post_id, 'expertise');
 ?>
 

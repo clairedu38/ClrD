@@ -2,7 +2,7 @@
 :root {
   --peach: #e17c69;
   --red1: #AE312D;
-  --red2: #B7524D;
+  --red2: #b7524d;
   --orange: #E19754;
   --brown-dark: #644C3E;
   --brown-regular: #92705C;
@@ -52,7 +52,7 @@ h4 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -68,6 +68,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .btn-titre {
@@ -106,12 +107,13 @@ a {
 .bouton:hover i {
   color: white;
   transition: 0.2s ease-in-out;
+  animation: bounce2 0.5s ease-in-out;
 }
 .bouton:hover:before {
   width: 100%;
 }
 
-@keyframes bounce {
+@keyframes bounce2 {
   0%, 100%, 50%, 80% {
     transform: translateX(0);
   }
@@ -122,8 +124,8 @@ a {
     transform: translateX(-3px);
   }
 }
-i:hover, .arrow:hover {
-  animation: bounce 0.5s ease-in-out;
+.arrow:hover {
+  animation: bounce2 0.5s ease-in-out;
 }
 
 @media (max-width: 1024px) {
@@ -148,10 +150,10 @@ i:hover, .arrow:hover {
     font-size: 30px;
   }
   h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .btn-titre {
     font-size: 25px;
@@ -250,13 +252,13 @@ header .menuToggle input:checked ~ .menuItem {
 
 .menuItem {
   position: absolute;
-  width: 150px;
+  width: 250px;
   padding: 80px 50px 50px 50px;
   background: var(--red2);
   list-style-type: none;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  left: -150px; /* Déplacer le menu hors de la vue par défaut */
+  left: -250px; /* Déplacer le menu hors de la vue par défaut */
   top: 0;
   height: 100vh;
   margin: 0;
@@ -265,6 +267,9 @@ header .menuToggle input:checked ~ .menuItem {
   padding: 10px 0;
   font-size: 22px;
   color: white;
+}
+.menuItem .current-menu-item {
+  color: var(--brown-dark);
 }
 
 .menu--left {
@@ -298,13 +303,18 @@ footer {
 footer .first-footer {
   background-color: var(--beige2);
   background-image: url("../assets/images/banniere-pattern-clair.webp");
-  background-size: contain;
+  background-size: 60%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 4vh;
+}
+@media (max-width: 1024px) {
+  footer .first-footer {
+    background-size: 100%;
+  }
 }
 footer .first-footer > div {
   width: 30vw;
@@ -365,6 +375,7 @@ footer .second-footer p a {
   footer .first-footer {
     flex-direction: column-reverse;
     padding: 4vh 0 1vh 0;
+    background-size: 180%;
   }
   footer .first-footer > div {
     width: 70vw;
@@ -418,7 +429,7 @@ footer .second-footer p a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--peach);
+  background: linear-gradient(48deg, rgba(225, 124, 105, 0.8) 0%, rgb(225, 124, 105) 30%, rgb(225, 124, 105) 70%, rgba(225, 124, 105, 0.8) 100%);
   display: flex;
   padding: 15px;
   box-sizing: border-box;
@@ -429,14 +440,18 @@ footer .second-footer p a {
   transition: opacity 0.6s ease-in-out;
 }
 .photo-hover .hover-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.photo-hover .hover-arrow {
   position: relative;
   display: flex;
   justify-content: center;
-}
-.photo-hover .hover-link .link {
-  width: 1.5vw;
-  height: auto;
-  min-width: 10px;
+  z-index: 11;
 }
 .photo-hover .hover-text {
   color: white;
@@ -552,8 +567,8 @@ footer .second-footer p a {
 .banniere-accueil-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banniere-accueil-textes {
   position: absolute;
@@ -692,7 +707,7 @@ footer .second-footer p a {
     transition: all 0.3s ease-in-out;
   }
   .banniere-accueil-image {
-    height: 35vh;
+    height: 40vh;
   }
   .presentation-accueil {
     padding: 8% 10%;
@@ -721,6 +736,9 @@ footer .second-footer p a {
   }
   .banniere-accueil-textes h1 {
     font-size: 15px;
+  }
+  .banniere-accueil-image {
+    height: 50vh;
   }
   .presentation-accueil {
     padding: 8% 10%;
@@ -761,12 +779,14 @@ footer .second-footer p a {
   height: 80px;
   margin-bottom: 15px;
   overflow: hidden;
+  background-color: var(--peach);
 }
 .banniere-recommandations img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.6;
 }
 
 .recommandations {
@@ -789,10 +809,15 @@ footer .second-footer p a {
 }
 
 .swiper {
-  width: 100%;
+  width: 70%;
   padding-top: 0;
   padding-bottom: 50px;
   overflow: initial !important;
+}
+@media (max-width: 767px) {
+  .swiper {
+    width: 100%;
+  }
 }
 
 .swiper-slide {
@@ -822,6 +847,9 @@ footer .second-footer p a {
   background-color: var(--beige2);
   padding: 50px 15% 60px 15%;
   height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .bloc-expertise h2 {
   text-align: center;
@@ -839,14 +867,14 @@ footer .second-footer p a {
   text-align: center;
 }
 .bloc-expertise .liste-expertise .service-unique p {
-  display: none;
+  opacity: 0;
 }
 .bloc-expertise .liste-expertise .service-unique img {
   width: 50px;
   transition: width 0.2s ease-in-out;
 }
 .bloc-expertise .liste-expertise .service-unique:hover p {
-  display: block;
+  opacity: 1;
 }
 .bloc-expertise .liste-expertise .service-unique:hover h4 {
   font-size: 25px;
@@ -879,7 +907,7 @@ footer .second-footer p a {
 @media (max-width: 1024px) {
   .bloc-expertise {
     padding: 4% 10% 60px 10%;
-    height: 37vh;
+    height: 40vh;
   }
   .bloc-expertise h2 {
     padding-bottom: 20px;
@@ -892,7 +920,7 @@ footer .second-footer p a {
     justify-content: space-around;
   }
   .bloc-expertise {
-    height: 70vh;
+    height: 90vh;
   }
 }
 .contact-formulaire h2 {

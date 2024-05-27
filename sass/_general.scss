@@ -1,7 +1,7 @@
 :root {
     --peach: #e17c69;
     --red1: #AE312D;
-    --red2: #B7524D;
+    --red2: #b7524d;
     --orange: #E19754;
     --brown-dark: #644C3E;
     --brown-regular: #92705C;
@@ -59,7 +59,7 @@ h4 {
 }
 
 p {
-    font-size: 14px ;
+    font-size: 15px ;
     font-family: "Work Sans", sans-serif;
 }
 
@@ -79,6 +79,7 @@ a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .btn-titre {
@@ -121,6 +122,7 @@ a {
         i {
             color: white;
             transition: 0.2s ease-in-out;
+            animation: bounce2 0.5s ease-in-out;
         }
 
         &:before {
@@ -131,7 +133,7 @@ a {
 
   // ANIMATION FLECHE BOUTON
 
-@keyframes bounce {
+@keyframes bounce2 {
 	0%, 100%, 50%, 80% {
 		transform: translateX(0)
 	}
@@ -143,8 +145,8 @@ a {
 	}
 }
 
-i:hover, .arrow:hover {
-    animation: bounce 0.5s ease-in-out;
+.arrow:hover {
+    animation: bounce2 0.5s ease-in-out;
 }
 
 
@@ -181,11 +183,11 @@ i:hover, .arrow:hover {
     }
 
     h3 {
-        font-size: 13px ;
+        font-size: 14px ;
     }
 
     p {
-        font-size: 12px ;
+        font-size: 14px ;
     }
 
     .btn-titre {

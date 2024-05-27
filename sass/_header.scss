@@ -100,13 +100,13 @@ header {
 
 .menuItem {
   position: absolute;
-  width: 150px;
+  width: 250px;
   padding: 80px 50px 50px 50px;
   background: var(--red2);
   list-style-type: none;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  left: -150px; /* Déplacer le menu hors de la vue par défaut */
+  left: -250px; /* Déplacer le menu hors de la vue par défaut */
   top: 0;
   height: 100vh;
   margin: 0;
@@ -115,6 +115,10 @@ header {
     padding: 10px 0;
     font-size: 22px;
     color: white;
+  }
+
+  .current-menu-item {
+    color: var(--brown-dark);
   }
 }
 

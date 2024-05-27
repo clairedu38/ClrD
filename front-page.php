@@ -69,13 +69,13 @@ $photoBanniereAccueil = get_field('banniere_accueil');
                     <a class="accueil-portfolio-projets-image" href="<?php the_permalink(); ?>">
                         <img src="<?php echo esc_url($vignette['url']); ?>" alt="<?php echo esc_attr($vignette['alt']); ?>">
                     </a>
-                    <div>
+                    <a href="<?php the_permalink(); ?>">
                         <h3><?php echo get_the_title() ?></h3>
                         <p class="hover-category"><?php foreach ($expertises as $expertise) {
                         echo '/  ' . esc_html($expertise->name) . '  </br>' ;
                         } ?>
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <?php
             }

@@ -13,7 +13,7 @@ get_header();?>
     <div class="filtre-expertise">
         <?php $expertises = get_terms('expertise'); // récupération des catégories via ACF ?>
         <div class="option all-option selected">
-            <p>Tout</p>
+            <p>Tous les projets</p>
         </div>
         <?php 
         foreach ($expertises as $expertise) { ?>
